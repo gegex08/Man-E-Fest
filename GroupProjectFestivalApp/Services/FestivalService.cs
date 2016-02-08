@@ -11,7 +11,8 @@ namespace GroupProjectFestivalApp.Services
     {
         private FestivalRepository _festivalRepo;
 
-        public FestivalService(FestivalRepository festivalRepo) {
+        public FestivalService(FestivalRepository festivalRepo)
+        {
             _festivalRepo = festivalRepo;
         }
         public IList<FestivalDTO> GetFestival()
@@ -23,7 +24,6 @@ namespace GroupProjectFestivalApp.Services
                         Id = f.Id,
                         Name = f.Name,
                         Event = f.Event,
-                        Tags = f.Tags,
                         Description = f.Description,
                         Host = f.Host
                     }).ToList();

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -22,7 +23,8 @@ namespace GroupProjectFestivalApp.Domain {
 
         public string Host { get; set; }
 
-        public IList<Rating> Ratings { get; set; }
+        [Range(0,5)]
+        public int Ratings { get; set; }
 
 
     }
