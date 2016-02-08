@@ -47,19 +47,30 @@ namespace GroupProjectFestivalApp
             // Enable the application to use bearer tokens to authenticate users
             //app.UseOAuthBearerTokens(OAuthOptions);
 
-            // Uncomment the following lines to enable logging in with third party login providers
+            //// Uncomment the following lines to enable logging in with third party login providers
+            //app.UseMicrosoftAccountAuthentication(
+            //    clientId: "",
+            //app.UseMicrosoftAccountAuthentication(
+            //    clientId: "",
            // app.UseMicrosoftAccountAuthentication(
            //     clientId: "",
             //    clientSecret: "");
 
             //app.UseTwitterAuthentication(
+           // app.UseTwitterAuthentication(
             //    consumerKey: "",
             //    consumerSecret: "");
 
             //app.UseFacebookAuthentication(
+            //app.UseFacebookAuthentication(
+            //    appId: "",
             //    appId: "",
             //    appSecret: "");
 
+            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            //{
+            //    ClientId = "",
+            //    ClientSecret = ""
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
             //    ClientId = "",
