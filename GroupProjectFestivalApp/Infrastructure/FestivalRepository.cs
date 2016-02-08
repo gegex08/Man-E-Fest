@@ -11,10 +11,10 @@ namespace GroupProjectFestivalApp.Infrastructure {
         public FestivalRepository(DbContext db) {
             _db = (ApplicationDbContext)db;
         }
-        public IQueryable<Event> ListEvent() {
+      /*  public IQueryable<Event> ListEvent() {
             return from e in _db.Event
                    where e.Active
                    select e;
-        }
+        }*/
     }
 }

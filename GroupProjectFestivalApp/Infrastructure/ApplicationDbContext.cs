@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
@@ -18,5 +19,8 @@ namespace GroupProjectFestivalApp.Infrastructure
         {
             return new ApplicationDbContext();
         }
+
+        public IDbSet<Event> Events { get; set; }
+
     }
 }
