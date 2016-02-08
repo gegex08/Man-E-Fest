@@ -202,7 +202,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Domain\ApplicationUser.cs" />
+    <Compile Include="Domain\Attraction.cs" />
+    <Compile Include="Domain\Event.cs" />
+    <Compile Include="Domain\Host.cs" />
     <Compile Include="Domain\IEntityInterfaces.cs" />
+    <Compile Include="Domain\Pin.cs" />
+    <Compile Include="Domain\Tag.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
     <Compile Include="Migrations\Configuration.cs" />
