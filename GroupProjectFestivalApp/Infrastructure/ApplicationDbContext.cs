@@ -20,7 +20,6 @@ namespace GroupProjectFestivalApp.Infrastructure
             return new ApplicationDbContext();
         }
 
-        public IDbSet<Event> Events { get; set; }
 
     }
 }
