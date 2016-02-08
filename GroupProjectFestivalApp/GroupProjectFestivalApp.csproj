@@ -244,7 +244,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
-    <Content Include="Presentation\ngApp\app.js" />
+    <Content Include="Presentation\ngApp\views\homeView.html" />
     <Content Include="Presentation\ngApp\controllers\authController.js" />
     <Content Include="Presentation\ngApp\views\homeView.html" />
     <Content Include="Presentation\ngApp\views\login.html" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GroupProjectFestivalApp.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,10 +10,10 @@ namespace GroupProjectFestivalApp.Presentation.Controllers {
     public class OverviewController : ApiController{
 
 
-        private OverviewService _overviewService;
+        private FestivalService _festivalService;
 
-        public OverviewController(OverviewService overviewService) {
-            _overviewService = overviewService;
+        public OverviewController(FestivalService festivalService) {
+            _festivalService = festivalService;
         }
 
     }
