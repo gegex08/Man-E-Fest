@@ -64,17 +64,17 @@ namespace GroupProjectFestivalApp
             //app.UseFacebookAuthentication(
             //app.UseFacebookAuthentication(
             //    appId: "",
-              //  appId: "",
+            //    appId: "",
             //    appSecret: "");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
             //    ClientId = "",
             //    ClientSecret = ""
-          //  app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-           // {
-             //   ClientId = "",
-              //  ClientSecret = ""
+            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            //{
+            //    ClientId = "",
+            //    ClientSecret = ""
             //});
         }
     }
