@@ -35,7 +35,7 @@
                 controllerAs: 'controller'
             });
             $routeProvider.when('/register', {
-                templateUrl: 'Presentation/ngApp/views/register.html',
+                templateUrl: '/Presentation/ngApp/views/register.html',
                 controller: GroupProjectFestivalApp.Controllers.AuthController,
                 controllerAs: 'controller'
             });
