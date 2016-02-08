@@ -9,10 +9,11 @@ namespace GroupProjectFestivalApp.Services.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Attraction { get; set; }
+
+        public string Pin { get; set; }
         public string Event { get; set; }
-        public IList<Tag> Tag { get; set; }
-        public string Description { get; set; }
-        public string Host { get; set; }
-        public int Ratings { get; set; }
+        public string Comment { get; set; }
+        
     }
 }
