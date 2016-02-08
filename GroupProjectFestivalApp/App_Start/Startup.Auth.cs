@@ -52,19 +52,19 @@ namespace GroupProjectFestivalApp
                 clientId: "",
                 clientSecret: "");
 
-            app.UseTwitterAuthentication(
-                consumerKey: "",
-                consumerSecret: "");
+            //app.UseTwitterAuthentication(
+            //    consumerKey: "",
+            //    consumerSecret: "");
 
-            app.UseFacebookAuthentication(
-                appId: "",
-                appSecret: "");
+            //app.UseFacebookAuthentication(
+            //    appId: "",
+            //    appSecret: "");
 
-            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            {
-                ClientId = "",
-                ClientSecret = ""
-            });
+            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            //{
+            //    ClientId = "",
+            //    ClientSecret = ""
+            //});
         }
     }
 }
