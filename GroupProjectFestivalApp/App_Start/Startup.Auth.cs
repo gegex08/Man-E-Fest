@@ -50,6 +50,8 @@ namespace GroupProjectFestivalApp
             //// Uncomment the following lines to enable logging in with third party login providers
             //app.UseMicrosoftAccountAuthentication(
             //    clientId: "",
+            //app.UseMicrosoftAccountAuthentication(
+            //    clientId: "",
            // app.UseMicrosoftAccountAuthentication(
            //     clientId: "",
             //    clientSecret: "");
@@ -59,6 +61,7 @@ namespace GroupProjectFestivalApp
             //    consumerKey: "",
             //    consumerSecret: "");
 
+            //app.UseFacebookAuthentication(
             //app.UseFacebookAuthentication(
             //    appId: "",
               //  appId: "",
