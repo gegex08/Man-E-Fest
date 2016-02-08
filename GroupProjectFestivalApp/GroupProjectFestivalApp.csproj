@@ -202,7 +202,12 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Domain\ApplicationUser.cs" />
+    <Compile Include="Domain\Attraction.cs" />
+    <Compile Include="Domain\Event.cs" />
+    <Compile Include="Domain\Host.cs" />
     <Compile Include="Domain\IEntityInterfaces.cs" />
+    <Compile Include="Domain\Pin.cs" />
+    <Compile Include="Domain\Tag.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\FestivalRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
@@ -212,11 +217,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Presentation\Controllers\OverviewController.cs" />
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Presentation\Models\Identity\AccountViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\Identity\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
+    <Compile Include="Services\FestivalService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -236,6 +243,9 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
+    <Content Include="Presentation\ngApp\app.js" />
+    <Content Include="Presentation\ngApp\controllers\authController.js" />
+    <Content Include="Presentation\ngApp\views\homeView.html" />
     <Content Include="Presentation\ngApp\views\login.html" />
     <Content Include="Presentation\ngApp\views\register.html" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -249,6 +259,8 @@
     <Content Include="Presentation\ngApp\models\.keep" />
     <Content Include="Presentation\ngApp\services\.keep" />
     <Content Include="App_Data\.keep" />
+    <Content Include="Presentation\ngApp\controllers\authController.js.map" />
+    <Content Include="Presentation\ngApp\app.js.map" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -288,6 +300,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\userOverviewController.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
