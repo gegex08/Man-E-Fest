@@ -10,11 +10,9 @@ namespace GroupProjectFestivalApp.Domain {
 
         public string Name { get; set; }
 
-        public string Attraction { get; set; }
+        public IList<Attraction> Attractions { get; set; }
 
-        public string Pin { get; set; }
-
-        public string Event { get; set; }
+        public IList<Event> Events { get; set; }
 
         public string Comment { get; set; }
 

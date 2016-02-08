@@ -14,7 +14,7 @@ namespace GroupProjectFestivalApp.Domain {
 
         public string Name { get; set; }
 
-        public string Tag { get; set; }
+        public IList<Tag> Tags { get; set; }
 
         public string Description { get; set; }
 

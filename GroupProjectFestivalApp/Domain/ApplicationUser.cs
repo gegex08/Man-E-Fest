@@ -19,5 +19,8 @@ namespace GroupProjectFestivalApp.Domain
             // Add custom user claims here
             return userIdentity;
         }
+        public IList<Event> Events { get; set; }
+
+        public IList<Host> Hosts { get; set; }
     }
 }
