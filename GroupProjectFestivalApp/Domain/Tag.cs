@@ -16,5 +16,7 @@ namespace GroupProjectFestivalApp.Domain {
 
         public string Comment { get; set; }
 
+        public bool Active { get; set; } = true;
+
     }
 }

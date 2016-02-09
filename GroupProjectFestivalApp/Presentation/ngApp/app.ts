@@ -41,7 +41,7 @@
             });
             $routeProvider.when('/home', {
                 templateUrl: '/Presentation/ngApp/views/homeView.html',
-                controller: GroupProjectFestivalApp.Controllers.OverviewController,
+                controller: GroupProjectFestivalApp.Controllers.HostController,
                 controllerAs: 'controller'
             });
         });
