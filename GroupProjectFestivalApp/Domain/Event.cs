@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 
 namespace GroupProjectFestivalApp.Domain {
-    public class Event {
+    public class Event : IDbEntity, IActivatable {
 
         public int Id { get; set; }
 
@@ -26,6 +26,6 @@ namespace GroupProjectFestivalApp.Domain {
         [Range(0,5)]
         public int Ratings { get; set; }
 
-
+        public bool Active { get; set; } = true;
     }
 }

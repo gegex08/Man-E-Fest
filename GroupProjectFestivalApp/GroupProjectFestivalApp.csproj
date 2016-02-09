@@ -209,11 +209,16 @@
     <Compile Include="Domain\Pushpin.cs" />
     <Compile Include="Domain\Tag.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
+    <Compile Include="Infrastructure\EventRepositiory.cs" />
     <Compile Include="Infrastructure\HostRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
     <Compile Include="Migrations\201602091807365_initial.cs" />
     <Compile Include="Migrations\201602091807365_initial.Designer.cs">
       <DependentUpon>201602091807365_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602092009120_database.cs" />
+    <Compile Include="Migrations\201602092009120_database.Designer.cs">
+      <DependentUpon>201602092009120_database.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
@@ -295,6 +300,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201602091807365_initial.resx">
       <DependentUpon>201602091807365_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602092009120_database.resx">
+      <DependentUpon>201602092009120_database.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
