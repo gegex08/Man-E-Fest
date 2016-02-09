@@ -24,6 +24,7 @@ namespace GroupProjectFestivalApp.Services
                         
                         Id = f.Id,
                         Url = f.Url,
+                        Name = f.Name,
                         Pushpins = f.Pushpins,
                         Events = f.Events,
                         Attractions = f.Attractions,
