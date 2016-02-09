@@ -39,6 +39,11 @@
                 controller: GroupProjectFestivalApp.Controllers.AuthController,
                 controllerAs: 'controller'
             });
+            $routeProvider.when('/home', {
+                templateUrl: '/Presentation/ngApp/views/homeView.html',
+                controller: GroupProjectFestivalApp.Controllers.OverviewController,
+                controllerAs: 'controller'
+            });
         });
 }
 
