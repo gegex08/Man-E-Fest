@@ -244,6 +244,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
+    <Content Include="Presentation\ngApp\controllers\userOverviewController.js" />
     <Content Include="Presentation\ngApp\views\homeView.html" />
     <Content Include="Presentation\ngApp\controllers\authController.js" />
     <Content Include="Presentation\ngApp\views\homeView.html" />
@@ -262,6 +263,7 @@
     <Content Include="App_Data\.keep" />
     <Content Include="Presentation\ngApp\controllers\authController.js.map" />
     <Content Include="Presentation\ngApp\app.js.map" />
+    <Content Include="Presentation\ngApp\controllers\userOverviewController.js.map" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

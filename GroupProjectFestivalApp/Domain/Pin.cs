@@ -11,5 +11,8 @@ namespace GroupProjectFestivalApp.Domain {
       
 
         public string Host { get; set; }
+
+
+
     }
 }
