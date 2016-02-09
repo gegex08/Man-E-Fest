@@ -13,7 +13,7 @@ namespace GroupProjectFestivalApp.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201602082303307_initial"; }
+            get { return "201602091807365_initial"; }
         }
         
         string IMigrationMetadata.Source
