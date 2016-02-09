@@ -14,7 +14,6 @@ namespace GroupProjectFestivalApp.Migrations
                         Id = c.Int(nullable: false, identity: true),
                         StartTime = c.DateTime(nullable: false),
                         EndTime = c.DateTime(nullable: false),
-                        Attraction = c.String(),
                         Host = c.String(),
                         Ratings = c.Int(nullable: false),
                         Users_Id = c.String(maxLength: 128),
@@ -25,6 +24,33 @@ namespace GroupProjectFestivalApp.Migrations
                 .ForeignKey("dbo.Hosts", t => t.Host_Id)
                 .Index(t => t.Users_Id)
                 .Index(t => t.Host_Id);
+            
+            CreateTable(
+                "dbo.Attractions",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Description = c.String(),
+                        Host = c.String(),
+                        Rating = c.Int(nullable: false),
+                        Active = c.Boolean(nullable: false),
+                        Host_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Hosts", t => t.Host_Id)
+                .Index(t => t.Host_Id);
+            
+            CreateTable(
+                "dbo.Tags",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
+                        Comment = c.String(),
+                        Active = c.Boolean(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Pushpins",
@@ -40,32 +66,6 @@ namespace GroupProjectFestivalApp.Migrations
                         Loc7 = c.Boolean(nullable: false),
                         Loc8 = c.Boolean(nullable: false),
                         Host = c.String(),
-                        Host_Id = c.Int(),
-                    })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Hosts", t => t.Host_Id)
-                .Index(t => t.Host_Id);
-            
-            CreateTable(
-                "dbo.Tags",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Name = c.String(),
-                        Comment = c.String(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.Attractions",
-                c => new
-                    {
-                        Id = c.Int(nullable: false, identity: true),
-                        Event = c.String(),
-                        Name = c.String(),
-                        Description = c.String(),
-                        Host = c.String(),
-                        Rating = c.Int(nullable: false),
                         Active = c.Boolean(nullable: false),
                         Host_Id = c.Int(),
                     })
@@ -112,6 +112,7 @@ namespace GroupProjectFestivalApp.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Url = c.String(),
+                        Active = c.Boolean(nullable: false),
                         User_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.Id)
@@ -154,30 +155,30 @@ namespace GroupProjectFestivalApp.Migrations
                 .Index(t => t.Name, unique: true, name: "RoleNameIndex");
             
             CreateTable(
-                "dbo.PushpinEvents",
-                c => new
-                    {
-                        Pushpin_Id = c.Int(nullable: false),
-                        Event_Id = c.Int(nullable: false),
-                    })
-                .PrimaryKey(t => new { t.Pushpin_Id, t.Event_Id })
-                .ForeignKey("dbo.Pushpins", t => t.Pushpin_Id, cascadeDelete: true)
-                .ForeignKey("dbo.Events", t => t.Event_Id, cascadeDelete: true)
-                .Index(t => t.Pushpin_Id)
-                .Index(t => t.Event_Id);
-            
-            CreateTable(
-                "dbo.AttractionTags",
+                "dbo.AttractionEvents",
                 c => new
                     {
                         Attraction_Id = c.Int(nullable: false),
-                        Tag_Id = c.Int(nullable: false),
+                        Event_Id = c.Int(nullable: false),
                     })
-                .PrimaryKey(t => new { t.Attraction_Id, t.Tag_Id })
+                .PrimaryKey(t => new { t.Attraction_Id, t.Event_Id })
                 .ForeignKey("dbo.Attractions", t => t.Attraction_Id, cascadeDelete: true)
-                .ForeignKey("dbo.Tags", t => t.Tag_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Events", t => t.Event_Id, cascadeDelete: true)
                 .Index(t => t.Attraction_Id)
-                .Index(t => t.Tag_Id);
+                .Index(t => t.Event_Id);
+            
+            CreateTable(
+                "dbo.TagAttractions",
+                c => new
+                    {
+                        Tag_Id = c.Int(nullable: false),
+                        Attraction_Id = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => new { t.Tag_Id, t.Attraction_Id })
+                .ForeignKey("dbo.Tags", t => t.Tag_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Attractions", t => t.Attraction_Id, cascadeDelete: true)
+                .Index(t => t.Tag_Id)
+                .Index(t => t.Attraction_Id);
             
             CreateTable(
                 "dbo.TagEvents",
@@ -190,6 +191,19 @@ namespace GroupProjectFestivalApp.Migrations
                 .ForeignKey("dbo.Tags", t => t.Tag_Id, cascadeDelete: true)
                 .ForeignKey("dbo.Events", t => t.Event_Id, cascadeDelete: true)
                 .Index(t => t.Tag_Id)
+                .Index(t => t.Event_Id);
+            
+            CreateTable(
+                "dbo.PushpinEvents",
+                c => new
+                    {
+                        Pushpin_Id = c.Int(nullable: false),
+                        Event_Id = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => new { t.Pushpin_Id, t.Event_Id })
+                .ForeignKey("dbo.Pushpins", t => t.Pushpin_Id, cascadeDelete: true)
+                .ForeignKey("dbo.Events", t => t.Event_Id, cascadeDelete: true)
+                .Index(t => t.Pushpin_Id)
                 .Index(t => t.Event_Id);
             
         }
@@ -205,18 +219,22 @@ namespace GroupProjectFestivalApp.Migrations
             DropForeignKey("dbo.Attractions", "Host_Id", "dbo.Hosts");
             DropForeignKey("dbo.Events", "Users_Id", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
-            DropForeignKey("dbo.TagEvents", "Event_Id", "dbo.Events");
-            DropForeignKey("dbo.TagEvents", "Tag_Id", "dbo.Tags");
-            DropForeignKey("dbo.AttractionTags", "Tag_Id", "dbo.Tags");
-            DropForeignKey("dbo.AttractionTags", "Attraction_Id", "dbo.Attractions");
             DropForeignKey("dbo.PushpinEvents", "Event_Id", "dbo.Events");
             DropForeignKey("dbo.PushpinEvents", "Pushpin_Id", "dbo.Pushpins");
-            DropIndex("dbo.TagEvents", new[] { "Event_Id" });
-            DropIndex("dbo.TagEvents", new[] { "Tag_Id" });
-            DropIndex("dbo.AttractionTags", new[] { "Tag_Id" });
-            DropIndex("dbo.AttractionTags", new[] { "Attraction_Id" });
+            DropForeignKey("dbo.TagEvents", "Event_Id", "dbo.Events");
+            DropForeignKey("dbo.TagEvents", "Tag_Id", "dbo.Tags");
+            DropForeignKey("dbo.TagAttractions", "Attraction_Id", "dbo.Attractions");
+            DropForeignKey("dbo.TagAttractions", "Tag_Id", "dbo.Tags");
+            DropForeignKey("dbo.AttractionEvents", "Event_Id", "dbo.Events");
+            DropForeignKey("dbo.AttractionEvents", "Attraction_Id", "dbo.Attractions");
             DropIndex("dbo.PushpinEvents", new[] { "Event_Id" });
             DropIndex("dbo.PushpinEvents", new[] { "Pushpin_Id" });
+            DropIndex("dbo.TagEvents", new[] { "Event_Id" });
+            DropIndex("dbo.TagEvents", new[] { "Tag_Id" });
+            DropIndex("dbo.TagAttractions", new[] { "Attraction_Id" });
+            DropIndex("dbo.TagAttractions", new[] { "Tag_Id" });
+            DropIndex("dbo.AttractionEvents", new[] { "Event_Id" });
+            DropIndex("dbo.AttractionEvents", new[] { "Attraction_Id" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
@@ -224,22 +242,23 @@ namespace GroupProjectFestivalApp.Migrations
             DropIndex("dbo.Hosts", new[] { "User_Id" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
-            DropIndex("dbo.Attractions", new[] { "Host_Id" });
             DropIndex("dbo.Pushpins", new[] { "Host_Id" });
+            DropIndex("dbo.Attractions", new[] { "Host_Id" });
             DropIndex("dbo.Events", new[] { "Host_Id" });
             DropIndex("dbo.Events", new[] { "Users_Id" });
-            DropTable("dbo.TagEvents");
-            DropTable("dbo.AttractionTags");
             DropTable("dbo.PushpinEvents");
+            DropTable("dbo.TagEvents");
+            DropTable("dbo.TagAttractions");
+            DropTable("dbo.AttractionEvents");
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.Hosts");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
-            DropTable("dbo.Attractions");
-            DropTable("dbo.Tags");
             DropTable("dbo.Pushpins");
+            DropTable("dbo.Tags");
+            DropTable("dbo.Attractions");
             DropTable("dbo.Events");
         }
     }

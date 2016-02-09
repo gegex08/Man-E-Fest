@@ -211,13 +211,9 @@
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\HostRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
-    <Compile Include="Migrations\201602082303307_initial.cs" />
-    <Compile Include="Migrations\201602082303307_initial.Designer.cs">
-      <DependentUpon>201602082303307_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602091636374_repoupgrade.cs" />
-    <Compile Include="Migrations\201602091636374_repoupgrade.Designer.cs">
-      <DependentUpon>201602091636374_repoupgrade.cs</DependentUpon>
+    <Compile Include="Migrations\201602091807365_initial.cs" />
+    <Compile Include="Migrations\201602091807365_initial.Designer.cs">
+      <DependentUpon>201602091807365_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
@@ -252,6 +248,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
+    <Content Include="Presentation\ngApp\controllers\userOverviewController.js" />
     <Content Include="Presentation\ngApp\views\homeView.html" />
     <Content Include="Presentation\ngApp\views\login.html" />
     <Content Include="Presentation\ngApp\views\register.html" />
@@ -266,6 +263,7 @@
     <Content Include="Presentation\ngApp\models\.keep" />
     <Content Include="Presentation\ngApp\services\.keep" />
     <Content Include="App_Data\.keep" />
+    <Content Include="Presentation\ngApp\controllers\userOverviewController.js.map" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -294,7 +292,11 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Services\Models\.keep" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602091807365_initial.resx">
+      <DependentUpon>201602091807365_initial.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -317,14 +319,6 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602082303307_initial.resx">
-      <DependentUpon>201602082303307_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602091636374_repoupgrade.resx">
-      <DependentUpon>201602091636374_repoupgrade.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
