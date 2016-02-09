@@ -206,11 +206,15 @@
     <Compile Include="Domain\Event.cs" />
     <Compile Include="Domain\Host.cs" />
     <Compile Include="Domain\IEntityInterfaces.cs" />
-    <Compile Include="Domain\Pin.cs" />
+    <Compile Include="Domain\Pushpin.cs" />
     <Compile Include="Domain\Tag.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\FestivalRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
+    <Compile Include="Migrations\201602082303307_initial.cs" />
+    <Compile Include="Migrations\201602082303307_initial.Designer.cs">
+      <DependentUpon>201602082303307_initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />
@@ -247,7 +251,6 @@
     <Content Include="Presentation\ngApp\controllers\userOverviewController.js" />
     <Content Include="Presentation\ngApp\views\homeView.html" />
     <Content Include="Presentation\ngApp\controllers\authController.js" />
-    <Content Include="Presentation\ngApp\views\homeView.html" />
     <Content Include="Presentation\ngApp\views\login.html" />
     <Content Include="Presentation\ngApp\views\register.html" />
     <Content Include="Scripts\angular-mocks.js" />
@@ -289,12 +292,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Services\Models\.keep" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Home\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
@@ -317,6 +318,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602082303307_initial.resx">
+      <DependentUpon>201602082303307_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
