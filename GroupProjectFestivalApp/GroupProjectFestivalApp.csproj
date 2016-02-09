@@ -211,9 +211,9 @@
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\HostRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
-    <Compile Include="Migrations\201602091807365_initial.cs" />
-    <Compile Include="Migrations\201602091807365_initial.Designer.cs">
-      <DependentUpon>201602091807365_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201602091941562_initial.cs" />
+    <Compile Include="Migrations\201602091941562_initial.Designer.cs">
+      <DependentUpon>201602091941562_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
@@ -296,11 +296,6 @@
     <Content Include="Services\Models\.keep" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602091807365_initial.resx">
-      <DependentUpon>201602091807365_initial.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-2.2.0.min.map" />
@@ -322,6 +317,11 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602091941562_initial.resx">
+      <DependentUpon>201602091941562_initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

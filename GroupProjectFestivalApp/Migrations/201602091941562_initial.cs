@@ -111,6 +111,7 @@ namespace GroupProjectFestivalApp.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        Name = c.String(),
                         Url = c.String(),
                         Active = c.Boolean(nullable: false),
                         User_Id = c.String(maxLength: 128),
