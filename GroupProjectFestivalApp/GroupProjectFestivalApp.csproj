@@ -300,9 +300,9 @@
     <Content Include="Services\Models\.keep" />
   </ItemGroup>
   <ItemGroup>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602092009120_database.resx">
       <DependentUpon>201602092009120_database.cs</DependentUpon>
+      </EmbeddedResource>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-2.2.0.min.map" />
