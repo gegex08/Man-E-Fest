@@ -11,7 +11,7 @@ namespace GroupProjectFestivalApp.Domain {
 
         public string Url { get; set; }
 
-        public IList<Pin> Pins {get;set;}
+        public IList<Pushpin> Pushpins {get;set;}
 
     public IList<Event> Events {get; set;}
 

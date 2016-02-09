@@ -1,4 +1,5 @@
 ﻿using GroupProjectFestivalApp.Services;
+using GroupProjectFestivalApp.Services.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,5 +17,11 @@ namespace GroupProjectFestivalApp.Presentation.Controllers {
             _festivalService = festivalService;
         }
 
+        public IList<FestivalDTO> Get()
+        {
+            return _festivalService.GetFestival();
+
+        }
+            
     }
 }

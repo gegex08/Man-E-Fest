@@ -21,11 +21,12 @@ namespace GroupProjectFestivalApp.Services
             return (from f in _festivalRepo.List()
                     select new FestivalDTO()
                     {
-                        Id = f.Id,
+                        
                         Name = f.Name,
                         Event = f.Event,
                         Description = f.Description,
-                        Host = f.Host
+                        Host = f.Host,
+                        Rating = f.Rating
                     }).ToList();
         }
     }
