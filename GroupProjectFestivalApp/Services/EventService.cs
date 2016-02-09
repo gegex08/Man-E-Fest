@@ -6,7 +6,7 @@ using System.Web;
 
 namespace GroupProjectFestivalApp.Services {
     public class EventService {
-        private EvenRepository _eventRepo;
+        private EventRepository _eventRepo;
 
         public EventService(EventRepository eventRepo) {
             _eventRepo = eventRepo;
