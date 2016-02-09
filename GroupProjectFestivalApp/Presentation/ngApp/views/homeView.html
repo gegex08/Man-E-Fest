@@ -1,9 +1,9 @@
-﻿<div class="row" ng-model="host in controller.useroverviewcontroller">
+﻿<div class="row" ng-repeat="host in controller.hosts">
     <div class="col-lg-offset-1 col-md-5">
-        username
+        {{host.user}}
     </div>
     <div class="col-lg-offset-1 col-md-5">
-        {{host.name}}
+        {{host.url}}
     </div>
 </div>
 
@@ -12,7 +12,7 @@
         host.attractions
     </div>
     <div class="col-lg-offset-1 col-md-5">
-       host.events
+        host.events
     </div>
 </div>
 

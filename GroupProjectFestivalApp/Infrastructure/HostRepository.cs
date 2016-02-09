@@ -7,9 +7,9 @@ using System.Web;
 
 namespace GroupProjectFestivalApp.Infrastructure
 {
-    public class FestivalRepository : GenericRepository<Host>
+    public class HostRepository : GenericRepository<Host>
     {
-        public FestivalRepository(DbContext db) : base(db) { }
+        public HostRepository(DbContext db) : base(db) { }
     }
     //public IQueryable<Event> ListEvent() {
     //    return from e in _db.Event

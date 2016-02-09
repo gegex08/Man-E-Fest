@@ -6,7 +6,7 @@ using System.Web;
 
 namespace GroupProjectFestivalApp.Services.Models
 {
-    public class FestivalDTO
+    public class HostDTO
     {
 
         public int Id { get; set; }

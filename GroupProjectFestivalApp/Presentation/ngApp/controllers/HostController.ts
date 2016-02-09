@@ -1,13 +1,13 @@
 ﻿namespace GroupProjectFestivalApp.Controllers {
 
-    export class OverviewController {
+    export class HostController {
 
-        public overview;
+        public hosts;
 
         constructor(private $http: ng.IHttpService) {
-            $http.get(`/api/host`)
+            $http.get(`/api/hosts`)
                 .then((response) => {
-                    this.overview = response.data;
+                    this.hosts = response.data;
                 });
 
         }

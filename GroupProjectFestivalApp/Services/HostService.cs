@@ -7,19 +7,19 @@ using System.Web;
 
 namespace GroupProjectFestivalApp.Services
 {
-    public class FestivalService
+    public class HostService
     {
-        private FestivalRepository _festivalRepo;
+        private HostRepository _hostRepo;
 
-        public FestivalService(FestivalRepository festivalRepo)
+        public HostService(HostRepository hostRepo)
         {
-            _festivalRepo = festivalRepo;
+            _hostRepo = hostRepo;
         }
-        public IList<FestivalDTO> GetFestival()
+        public IList<HostDTO> GetHost()
         {
 
-            return (from f in _festivalRepo.List()
-                    select new FestivalDTO()
+            return (from f in _hostRepo.List()
+                    select new HostDTO()
                     {
                         
                         Id = f.Id,
