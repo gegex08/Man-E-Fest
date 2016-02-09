@@ -5,7 +5,7 @@
         public overview;
 
         constructor(private $http: ng.IHttpService) {
-            $http.get(`/api/overview`)
+            $http.get('/api/overview')
                 .then((response) => {
                     this.overview = response.data;
                 });

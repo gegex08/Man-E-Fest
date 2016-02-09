@@ -245,7 +245,6 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
     <Content Include="Presentation\ngApp\views\homeView.html" />
-    <Content Include="Presentation\ngApp\controllers\authController.js" />
     <Content Include="Presentation\ngApp\views\homeView.html" />
     <Content Include="Presentation\ngApp\views\login.html" />
     <Content Include="Presentation\ngApp\views\register.html" />
@@ -260,8 +259,6 @@
     <Content Include="Presentation\ngApp\models\.keep" />
     <Content Include="Presentation\ngApp\services\.keep" />
     <Content Include="App_Data\.keep" />
-    <Content Include="Presentation\ngApp\controllers\authController.js.map" />
-    <Content Include="Presentation\ngApp\app.js.map" />
     <None Include="Scripts\jquery-2.2.0.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -287,12 +284,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Services\Models\.keep" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\Home\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
