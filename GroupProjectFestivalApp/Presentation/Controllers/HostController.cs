@@ -8,18 +8,20 @@ using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace GroupProjectFestivalApp.Presentation.Controllers {
-    public class OverviewController : ApiController{
+    public class HostController : ApiController{
 
 
-        private FestivalService _festivalService;
+        private HostService _hostService;
 
-        public OverviewController(FestivalService festivalService) {
-            _festivalService = festivalService;
+        public HostController(HostService hostService) {
+            _hostService = hostService;
         }
 
-        public IList<FestivalDTO> Get()
+        [HttpGet]
+        [Route("api/hosts")]
+        public IList<HostDTO> Get()
         {
-            return _festivalService.GetFestival();
+            return _hostService.GetHost();
 
         }
             

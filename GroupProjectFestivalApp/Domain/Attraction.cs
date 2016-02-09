@@ -7,12 +7,12 @@ using System.Web;
 
 namespace GroupProjectFestivalApp.Domain
 {
-    public class Attraction : IDbEntity, IActivatable
+    public class Attraction
     {
 
         public int Id { get; set; }
 
-        public string Event { get; set; }
+        public IList<Event> Events { get; set; }
 
         public string Name { get; set; }
 

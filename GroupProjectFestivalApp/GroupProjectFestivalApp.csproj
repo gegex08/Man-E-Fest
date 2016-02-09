@@ -209,11 +209,15 @@
     <Compile Include="Domain\Pushpin.cs" />
     <Compile Include="Domain\Tag.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
-    <Compile Include="Infrastructure\FestivalRepository.cs" />
+    <Compile Include="Infrastructure\HostRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
     <Compile Include="Migrations\201602082303307_initial.cs" />
     <Compile Include="Migrations\201602082303307_initial.Designer.cs">
       <DependentUpon>201602082303307_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602091636374_repoupgrade.cs" />
+    <Compile Include="Migrations\201602091636374_repoupgrade.Designer.cs">
+      <DependentUpon>201602091636374_repoupgrade.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
@@ -221,14 +225,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Presentation\Controllers\OverviewController.cs" />
+    <Compile Include="Presentation\Controllers\HostController.cs" />
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Presentation\Models\Identity\AccountViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\Identity\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
-    <Compile Include="Services\FestivalService.cs" />
-    <Compile Include="Services\Models\FestivalDTO.cs" />
+    <Compile Include="Services\HostService.cs" />
+    <Compile Include="Services\Models\HostDTO.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -304,7 +308,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
-    <TypeScriptCompile Include="Presentation\ngApp\controllers\userOverviewController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\hostController.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
@@ -322,6 +326,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201602082303307_initial.resx">
       <DependentUpon>201602082303307_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602091636374_repoupgrade.resx">
+      <DependentUpon>201602091636374_repoupgrade.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
