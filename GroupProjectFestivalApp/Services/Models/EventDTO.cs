@@ -1,12 +1,12 @@
-﻿using System;
+﻿using GroupProjectFestivalApp.Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace GroupProjectFestivalApp.Domain {
-    public class Event: IDbEntity, IActivatable {
-
+namespace GroupProjectFestivalApp.Services.Models {
+    public class EventDTO {
         public int Id { get; set; }
 
         public DateTime StartTime { get; set; }
@@ -23,11 +23,7 @@ namespace GroupProjectFestivalApp.Domain {
 
         public string Host { get; set; }
 
-        [Range(0,5)]
+        [Range(0, 5)]
         public int Ratings { get; set; }
-
-        public bool Active { get; set; }
-
-
     }
 }
