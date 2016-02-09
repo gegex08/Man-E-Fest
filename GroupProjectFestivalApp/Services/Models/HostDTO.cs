@@ -11,8 +11,9 @@ namespace GroupProjectFestivalApp.Services.Models
 
         public int Id { get; set; }
         public string Url { get; set; }
+        public string Name { get; set; }
         public IList<Pushpin> Pushpins { get; set; }
-
+        
         public IList<Event> Events { get; set; }
         public IList<Attraction> Attractions { get; set; }
         public ApplicationUser User { get; set; }
