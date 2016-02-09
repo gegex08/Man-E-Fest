@@ -28,6 +28,8 @@ namespace GroupProjectFestivalApp.Domain {
 
         public IList<Event> Events { get; set; }
 
-        
+        public bool Active { get; set; } = true;
+
+
     }
 }

@@ -7,7 +7,7 @@ using System.Web;
 
 namespace GroupProjectFestivalApp.Infrastructure
 {
-    public class FestivalRepository : GenericRepository<Attraction>
+    public class FestivalRepository : GenericRepository<Host>
     {
         public FestivalRepository(DbContext db) : base(db) { }
     }

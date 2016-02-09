@@ -9,14 +9,13 @@ namespace GroupProjectFestivalApp.Services.Models
     public class FestivalDTO
     {
 
+        public int Id { get; set; }
+        public string Url { get; set; }
+        public IList<Pushpin> Pushpins { get; set; }
 
-        public string Name { get; set; }
-        public string Event { get; set; }
-
-        public IList<Tag> Tags { get; set; }
-        public string Description { get; set; }
-        public string Host { get; set; }
-        public int Rating { get; set; }    
-        
+        public IList<Event> Events { get; set; }
+        public IList<Attraction> Attractions { get; set; }
+        public ApplicationUser User { get; set; }
+                
     }
 }

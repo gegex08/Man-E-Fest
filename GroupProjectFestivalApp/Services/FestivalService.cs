@@ -22,11 +22,12 @@ namespace GroupProjectFestivalApp.Services
                     select new FestivalDTO()
                     {
                         
-                        Name = f.Name,
-                        Event = f.Event,
-                        Description = f.Description,
-                        Host = f.Host,
-                        Rating = f.Rating
+                        Id = f.Id,
+                        Url = f.Url,
+                        Pushpins = f.Pushpins,
+                        Events = f.Events,
+                        Attractions = f.Attractions,
+                        User = f.User
                     }).ToList();
         }
     }

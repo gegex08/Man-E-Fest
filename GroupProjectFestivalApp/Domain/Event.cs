@@ -17,7 +17,7 @@ namespace GroupProjectFestivalApp.Domain {
 
         public IList<Pushpin> Pushpins { get; set; }
 
-        public string Attraction { get; set; }
+        public IList<Attraction> Attractions { get; set; }
 
         public IList<Tag> Tags { get; set; }
 

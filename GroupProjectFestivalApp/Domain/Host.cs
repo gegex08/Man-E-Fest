@@ -5,7 +5,8 @@ using System.Linq;
 using System.Web;
 
 namespace GroupProjectFestivalApp.Domain {
-    public class Host {
+    public class Host : IDbEntity, IActivatable
+    {
 
         public int Id { get; set; }
 
@@ -13,10 +14,12 @@ namespace GroupProjectFestivalApp.Domain {
 
         public IList<Pushpin> Pushpins {get;set;}
 
-    public IList<Event> Events {get; set;}
+        public IList<Event> Events {get; set;}
 
-public IList<Attraction> Attractions { get; set; }
+        public IList<Attraction> Attractions { get; set; }
 
-public ApplicationUser User { get; set; }
+        public ApplicationUser User { get; set; }
+
+        public bool Active { get; set; } = true;
     }
 }
