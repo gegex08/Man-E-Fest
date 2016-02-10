@@ -6,12 +6,10 @@ using System.Linq;
 using System.Web;
 
 namespace GroupProjectFestivalApp.Infrastructure {
-    public class EventRepositiory : GenericRepository<Event>
-        
-        {
+    public class EventRepository : GenericRepository<Event> {
 
-        public EventRepositiory(DbContext db) : base(db) { }
+        public EventRepository(DbContext db) : base(db) { }
 
-        }  
-        }
-    
+    }
+}
+

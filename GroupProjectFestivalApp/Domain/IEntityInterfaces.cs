@@ -4,15 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GroupProjectFestivalApp.Domain
-{
-    public interface IDbEntity
-    {
+namespace GroupProjectFestivalApp.Domain {
+    public interface IDbEntity {
         int Id { get; set; }
     }
 
-    public interface IActivatable
-    {
+    public interface IActivatable {
         bool Active { get; set; }
     }
 }
