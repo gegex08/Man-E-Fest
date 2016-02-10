@@ -22,5 +22,7 @@ namespace GroupProjectFestivalApp.Domain
         public IList<Event> Events { get; set; }
 
         public IList<Host> Hosts { get; set; }
+
+        public IList<Comment> Comments { get; set; }
     }
 }

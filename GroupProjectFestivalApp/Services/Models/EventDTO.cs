@@ -13,17 +13,18 @@ namespace GroupProjectFestivalApp.Services.Models {
 
         public DateTime EndTime { get; set; }
 
-        public ApplicationUser Users { get; set; }
+        public int AttendanceCount { get; set; }
 
-        public IList<Pushpin> Pushpins { get; set; }
 
-        public IList<Attraction> Attractions { get; set; }
 
-        public IList<Tag> Tags { get; set; }
+        public string Pushpin { get; set; }
+
+        public AttractionDTO Attraction { get; set; }
+
+        public IList<string> Tags { get; set; }
 
         public string Host { get; set; }
 
-        [Range(0, 5)]
-        public int Ratings { get; set; }
+        public int Rating { get; set; }
     }
 }

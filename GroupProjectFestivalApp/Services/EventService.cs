@@ -13,19 +13,24 @@ namespace GroupProjectFestivalApp.Services {
             _eventRepo = eventRepo;
         }
         public IList<EventDTO> GetEvent() {
-             
+
             return (from e in _eventRepo.List()
                     select new EventDTO() {
 
                         Id = e.Id,
                         StartTime = e.StartTime,
                         EndTime = e.EndTime,
-                        Users = e.Users,
-                        Pushpins = e.Pushpins,
-                        Attractions = e.Attractions,
-                        Tags = e.Tags,
-                        Host = e.Host,
-                        Ratings = e.Ratings
+                        AttendanceCount = e.Users.Count(),
+                        Pushpin = e.Pushpin.Name,
+                        Attraction = new AttractionDTO() {
+                            Name = e.Attraction.Name,
+                            Description = e.Attraction.Description,
+                            Rating = (int) e.Attraction.Rating
+                        },
+                        Tags = (from t in e.Tags
+                               select t.Name).ToList(),
+                        Host = e.Host.Name,
+                        Rating = (int) e.Rating
                     }).ToList();
         }
     }
