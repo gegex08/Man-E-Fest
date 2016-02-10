@@ -12,7 +12,7 @@ namespace GroupProjectFestivalApp.Domain {
 
         public string Name { get; set; }
 
-        public string Url { get; set; }
+        public string Url { get; set; }   
 
         public IList<Pushpin> Pushpins {get;set;}
 

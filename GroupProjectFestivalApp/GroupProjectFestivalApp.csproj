@@ -216,6 +216,10 @@
     <Compile Include="Migrations\201602091953130_initial.Designer.cs">
       <DependentUpon>201602091953130_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602092009120_database.cs" />
+    <Compile Include="Migrations\201602092009120_database.Designer.cs">
+      <DependentUpon>201602092009120_database.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\EventController.cs" />
@@ -252,6 +256,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
+    <Content Include="Presentation\ngApp\views\event.html" />
     <Content Include="Presentation\ngApp\views\homeView.html" />
     <Content Include="Presentation\ngApp\views\login.html" />
     <Content Include="Presentation\ngApp\views\register.html" />
@@ -295,6 +300,9 @@
     <Content Include="Services\Models\.keep" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Migrations\201602092009120_database.resx">
+      <DependentUpon>201602092009120_database.cs</DependentUpon>
+      </EmbeddedResource>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-2.2.0.min.map" />
