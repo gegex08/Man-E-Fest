@@ -20,10 +20,10 @@ namespace GroupProjectFestivalApp.Domain
 
         public string Description { get; set; }
 
-        public string Host { get; set; }
+        public Host Host { get; set; }
 
         [Range(0, 5)]
-        public int Rating { get; set; }
+        public double Rating { get; set; }
 
         public bool Active { get; set; } = true;
     }

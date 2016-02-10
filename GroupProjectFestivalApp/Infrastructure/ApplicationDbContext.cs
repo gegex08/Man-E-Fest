@@ -16,6 +16,10 @@ namespace GroupProjectFestivalApp.Infrastructure {
             return new ApplicationDbContext();
         }
 
-
+        public IDbSet<Host> Hosts { get; set; }
+        public IDbSet<Attraction> Attractions { get; set; }
+        public IDbSet<Tag> Tags { get; set; }
+        public IDbSet<Pushpin> Pushpins { get; set; }
+        public IDbSet<Event> Events { get; set; }
     }
 }
