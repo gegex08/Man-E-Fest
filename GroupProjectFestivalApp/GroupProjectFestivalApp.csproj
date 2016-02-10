@@ -209,6 +209,7 @@
     <Compile Include="Domain\Pushpin.cs" />
     <Compile Include="Domain\Tag.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
+    <Compile Include="Infrastructure\EventRepository.cs" />
     <Compile Include="Infrastructure\HostRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
     <Compile Include="Migrations\201602091953130_initial.cs" />
