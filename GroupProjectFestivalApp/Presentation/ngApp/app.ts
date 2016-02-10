@@ -44,7 +44,7 @@
                 controller: GroupProjectFestivalApp.Controllers.HostController,
                 controllerAs: 'controller'
             });
-            $routeProvider.when('/Event', {
+            $routeProvider.when('/events', {
                 templateUrl: '/Presentation/ngApp/views/event.html',
                 controller: GroupProjectFestivalApp.Controllers.EventController,
                 controllerAs: 'controller'

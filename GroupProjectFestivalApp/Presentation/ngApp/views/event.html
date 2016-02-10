@@ -1,19 +1,18 @@
-﻿<div class="row" ng-repeat="event in controller.event">
+﻿<div class="row" ng-repeat="event in controller.events">
     <div class="col-lg-offset-1 col-md-5">
-        <h3> Joining us today is {{event.attraction}}!!</h3>
+        <h3> Joining us today is {{event.attraction.name}}!!</h3>
     </div>
     <div class="col-lg-offset-1 col-md-4">
         Starting at {{event.startTime}}
-    </div>
-    <div class="col-lg-offset-2 col-md-3">
+        <br />
         Until {{event.endTime}}
     </div>
     <div class="col-lg-offset-4 col-md-1">
         {{event.pin}}
     </div>
     <div class="col-lg-offset-5 col-md-5">
-        {{event.comment}}
-        <input ng-model={{event.comment}} placeholder="Enter comment here" class="form-control" />
+        {{event.tags.name}}
+        <textarea style="font-size:12pt; height:100px; width:600px " placeholder="Enter Comments" class="form-control"></textarea>
         <input type="Submit" />
     </div>
     <div class="col-lg-offset-7 col-md-5">
