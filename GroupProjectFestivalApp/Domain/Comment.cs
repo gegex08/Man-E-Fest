@@ -4,17 +4,16 @@ using System.Linq;
 using System.Web;
 
 namespace GroupProjectFestivalApp.Domain {
-    public class Tag {
+    public class Comment {
 
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public Event Event { get; set; }
 
-        public IList<Attraction> Attractions { get; set; }
+        public ApplicationUser User { get; set; }
 
-        public IList<Event> Events { get; set; }
+        public string Message { get; set; }
 
         public bool Active { get; set; } = true;
-
     }
 }

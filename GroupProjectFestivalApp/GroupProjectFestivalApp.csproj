@@ -205,6 +205,7 @@
     <Compile Include="Domain\Attraction.cs" />
     <Compile Include="Domain\Event.cs" />
     <Compile Include="Domain\Host.cs" />
+    <Compile Include="Domain\Comment.cs" />
     <Compile Include="Domain\IEntityInterfaces.cs" />
     <Compile Include="Domain\Pushpin.cs" />
     <Compile Include="Domain\Tag.cs" />
@@ -212,13 +213,9 @@
     <Compile Include="Infrastructure\EventRepositiory.cs" />
     <Compile Include="Infrastructure\HostRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
-    <Compile Include="Migrations\201602091953130_initial.cs" />
-    <Compile Include="Migrations\201602091953130_initial.Designer.cs">
-      <DependentUpon>201602091953130_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602092009120_database.cs" />
-    <Compile Include="Migrations\201602092009120_database.Designer.cs">
-      <DependentUpon>201602092009120_database.cs</DependentUpon>
+    <Compile Include="Migrations\201602101618139_initial.cs" />
+    <Compile Include="Migrations\201602101618139_initial.Designer.cs">
+      <DependentUpon>201602101618139_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
@@ -235,8 +232,10 @@
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
     <Compile Include="Services\EventService.cs" />
     <Compile Include="Services\HostService.cs" />
+    <Compile Include="Services\Models\AttractionDTO.cs" />
     <Compile Include="Services\Models\EventDTO.cs" />
     <Compile Include="Services\Models\HostDTO.cs" />
+    <Compile Include="Services\Models\PushpinDTO.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -300,9 +299,6 @@
     <Content Include="Services\Models\.keep" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602092009120_database.resx">
-      <DependentUpon>201602092009120_database.cs</DependentUpon>
-      </EmbeddedResource>
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-2.2.0.min.map" />
@@ -327,8 +323,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201602091953130_initial.resx">
-      <DependentUpon>201602091953130_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201602101618139_initial.resx">
+      <DependentUpon>201602101618139_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

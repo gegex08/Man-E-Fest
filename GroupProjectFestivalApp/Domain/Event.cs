@@ -5,8 +5,8 @@ using System.Linq;
 using System.Web;
 
 namespace GroupProjectFestivalApp.Domain {
- 
-    public class Event: IDbEntity, IActivatable {
+
+    public class Event : IDbEntity, IActivatable {
 
         public int Id { get; set; }
 
@@ -14,21 +14,23 @@ namespace GroupProjectFestivalApp.Domain {
 
         public DateTime EndTime { get; set; }
 
-        public ApplicationUser Users { get; set; }
+        public IList<ApplicationUser> Users { get; set; }
 
-        public IList<Pushpin> Pushpins { get; set; }
+        public Pushpin Pushpin { get; set; }
 
-        public IList<Attraction> Attractions { get; set; }
+        public Attraction Attraction { get; set; }
 
         public IList<Tag> Tags { get; set; }
 
-        public string Host { get; set; }
+        public Host Host { get; set; }
 
-        [Range(0,5)]
-        public int Ratings { get; set; }
+        public IList<Comment> Comments { get; set; }
 
-        public bool Active { get; set; }
+        [Range(0, 5)]
+        public double Rating { get; set; }
 
-      
+        public bool Active { get; set; } = true;
+
+
     }
 }
