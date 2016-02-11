@@ -210,9 +210,12 @@
     <Compile Include="Domain\Pushpin.cs" />
     <Compile Include="Domain\Tag.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
+    <Compile Include="Infrastructure\AttractionRepository.cs" />
+    <Compile Include="Infrastructure\CommentRepository.cs" />
     <Compile Include="Infrastructure\EventRepository.cs" />
     <Compile Include="Infrastructure\HostRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
+    <Compile Include="Infrastructure\UserRepository.cs" />
     <Compile Include="Migrations\201602101618139_initial.cs" />
     <Compile Include="Migrations\201602101618139_initial.Designer.cs">
       <DependentUpon>201602101618139_initial.cs</DependentUpon>
@@ -233,11 +236,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Presentation\Controllers\HostController.cs" />
+    <Compile Include="Presentation\Models\CommentBindingModel.cs" />
     <Compile Include="Presentation\Models\Identity\AccountBindingModels.cs" />
     <Compile Include="Presentation\Models\Identity\AccountViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\Identity\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
+    <Compile Include="Services\CommentDTO.cs" />
     <Compile Include="Services\EventService.cs" />
     <Compile Include="Services\HostService.cs" />
     <Compile Include="Services\Models\AttractionDTO.cs" />
@@ -247,6 +252,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Audio\foo.mp3" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -263,6 +269,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Presentation\ngApp\.gitignore" />
+    <Content Include="Presentation\ngApp\views\attractionList.html" />
     <Content Include="Presentation\ngApp\views\event.html" />
     <Content Include="Presentation\ngApp\views\homeView.html" />
     <Content Include="Presentation\ngApp\views\login.html" />
@@ -341,9 +348,7 @@
       <DependentUpon>201602111611302_updated sound model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Audio\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

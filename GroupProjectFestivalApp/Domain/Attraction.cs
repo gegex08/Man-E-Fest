@@ -7,7 +7,7 @@ using System.Web;
 
 namespace GroupProjectFestivalApp.Domain
 {
-    public class Attraction
+    public class Attraction : IDbEntity, IActivatable
     {
 
         public int Id { get; set; }

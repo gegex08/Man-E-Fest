@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 
 namespace GroupProjectFestivalApp.Domain {
-    public class Comment {
+    public class Comment : IDbEntity, IActivatable {
 
         public int Id { get; set; }
 

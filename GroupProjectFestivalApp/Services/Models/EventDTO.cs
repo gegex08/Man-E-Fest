@@ -15,8 +15,6 @@ namespace GroupProjectFestivalApp.Services.Models {
 
         public int AttendanceCount { get; set; }
 
-
-
         public string Pushpin { get; set; }
 
         public AttractionDTO Attraction { get; set; }

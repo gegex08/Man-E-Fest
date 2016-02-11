@@ -1,4 +1,5 @@
-﻿using GroupProjectFestivalApp.Services;
+﻿using GroupProjectFestivalApp.Presentation.Models;
+using GroupProjectFestivalApp.Services;
 using GroupProjectFestivalApp.Services.Models;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,18 @@ namespace GroupProjectFestivalApp.Presentation.Controllers
         public IList<EventDTO> Get()
         {
             return _eventService.GetEvent();
+        }
+
+        [HttpPost]
+        [Authorize]
+        [Route("api/events/{id}/rating")]
+        public IHttpActionResult AddComment(int id, CommentBindingModel comment)
+        {
+            if (ModelState.IsValid) 
+            {
+                return Ok(_eventService.AddComment(id, User.Identity.Name, comment));
+            }
+            return BadRequest();
         }
     }
 }
