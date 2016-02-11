@@ -14,6 +14,8 @@ namespace GroupProjectFestivalApp.Domain {
 
         public string Message { get; set; }
 
+        public string PictureUrl { get; set; }
+
         public bool Active { get; set; } = true;
     }
 }

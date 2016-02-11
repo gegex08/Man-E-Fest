@@ -1,53 +1,64 @@
 ﻿<header>
-    <div class="row" ng-repeat="host in controller.hosts">
-        <div class="col-md-offset-2">
-            <div class="col-md-4 text-center">
-                <h3>Hello user!</h3>
-                  <h1>{{host.name}}</h1>
-            </div>
+    <div ng-show="event in controller.event">
+        <div class="col-md-4 text-left">
+            <h5>
+                Hello, {{event.user}}!
+                <img src="http://bonniesomerville.nz/wp-content/uploads/2015/08/profile-icon.png"
+                     height="25"
+                     width="25" />
+            </h5>
         </div>
     </div>
+    <div ng-show="host in controller.hosts">
+        <div class="col-md-4 text-center">
+            <h5>
+                Brought to you by {{host.name}}!
+            </h5>
+        </div>
+    </div>
+    <div class="row text-right">
+        <img src="https://consequenceofsound.files.wordpress.com/2014/10/sxsw-2015.png"
+             height="100"
+             width="100" />
+        <img src="http://www.aclfestival.com/wp/wp-content/uploads/2014/07/ACL_Logo-VERTICAL.png"
+             height="100"
+             width="100" />
+    </div>
 </header>
+<hr />
+
 <br />
 <br />
-
-<div class="row">
-    <img src="https://consequenceofsound.files.wordpress.com/2014/10/sxsw-2015.png"
-         height="200"
-         width="200" />
-    <img src="http://www.aclfestival.com/wp/wp-content/uploads/2014/07/ACL_Logo-VERTICAL.png"
-         height="200"
-         width="200" />
-</div>
-
-
+<br />
+<br />
+<br />
+<br />
 
 <div class="col-md-4"><h1>{{host.name}}</h1> </div>
 
 <div class="col-md-6"></div>
 
-    <div class="col-md-8">
-        <div class="btn btn-success" type="submit"> host.attractions </div>
-    
-        <div class="col-md-10">
-            <div class="btn btn-success" type="submit">host.events </div>
+<div class="col-md-12">
+    <div class="btn btn-success" type="submit"> host.attractions </div>
 
-    <div class="row">
-        <!--html pictures go here-->
+    <div class="col-md-10">
+        <div class="btn btn-success" type="submit">host.events </div>
 
-        <div class="col-md-offset-4 col-md-6">
-            <br />
-            <br />
-            <br />
-        I'm a picture
-            <br />
-            <br />
-            <br />
-            {{host.url}}
-            </div>
-                </div>
+        <div class="row">
+            <!--html pictures go here-->
+
+            <div class="col-md-offset-4 col-md-6">
+                <br />
+                <br />
+                <br />
+                I'm a picture
+                <br />
+                <br />
+                <br />
+                {{host.url}}
             </div>
         </div>
     </div>
 </div>
+
 
