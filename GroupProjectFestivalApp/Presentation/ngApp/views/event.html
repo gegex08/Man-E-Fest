@@ -3,28 +3,42 @@
         <h3> Joining us today is {{event.attraction.name}}!!</h3>
     </div>
     <div class="col-lg-offset-1 col-md-4">
-        Starting at {{event.startTime}}
+        Starting at :  {{event.startTime}}
         <br />
-        Until {{event.endTime}}
+        Until :  {{event.endTime}}
     </div>
     <div class="col-lg-offset-4 col-md-1">
         {{event.pin}}
     </div>
     <div class="col-lg-offset-5 col-md-5">
         {{event.tags.name}}
-        <textarea style="font-size:12pt; height:100px; width:600px " placeholder="Enter Comments" class="form-control"></textarea>
-        <input type="Submit" />
+        <textarea style="font-size:12pt; height:100px; width:600px " placeholder="Enter Comments" class="form-control"></textarea><br />
+        <br />
+        <input class="btn btn-success" type="Submit" />
     </div>
     <div class="col-lg-offset-7 col-md-5">
         {{event.rating}}
+        <br />
+        <br />
         <div class="col-md-4">
-            <div class="btn btn-success"
-        input type="submit" value="Rate bad" />
-        </div>
 
-        <input type="submit" value="Rate ok" />
-        <input type="submit" value="Rate good" />
-        <input type="submit" value="Rate great!" />
+            <input type="submit" value="Rate bad" />
+            <br /><br />
+            <input type="submit" value="Rate ok" />
+            <br /><br />
+            <input type="submit" value="Rate good" />
+            <br /><br />
+            <input type="submit" value="Rate great!" />
+            <br />
+            <br />
+            <br />
+            <br />
+            <img ng-src="{{event.attraction.pictureUrl}}"/>
+        </div>      
     </div>
 </div>
-   
+
+<audio controls autoplay>
+    <source ng-src="{{event.attraction.sound}}" type="audio/mp3">
+       Your browser does not support the audio element.
+</audio> 

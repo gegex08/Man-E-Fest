@@ -217,6 +217,14 @@
     <Compile Include="Migrations\201602101618139_initial.Designer.cs">
       <DependentUpon>201602101618139_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602102213493_updated models sound and picture.cs" />
+    <Compile Include="Migrations\201602102213493_updated models sound and picture.Designer.cs">
+      <DependentUpon>201602102213493_updated models sound and picture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602111611302_updated sound model.cs" />
+    <Compile Include="Migrations\201602111611302_updated sound model.Designer.cs">
+      <DependentUpon>201602111611302_updated sound model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\EventController.cs" />
@@ -327,6 +335,15 @@
     <EmbeddedResource Include="Migrations\201602101618139_initial.resx">
       <DependentUpon>201602101618139_initial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602102213493_updated models sound and picture.resx">
+      <DependentUpon>201602102213493_updated models sound and picture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602111611302_updated sound model.resx">
+      <DependentUpon>201602111611302_updated sound model.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Audio\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
