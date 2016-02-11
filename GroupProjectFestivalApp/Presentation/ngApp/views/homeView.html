@@ -1,28 +1,33 @@
 ﻿<div class="row" ng-repeat="host in controller.hosts">
     <div class="col-md-offset-2"> </div>
-    
-    <div class="col-md-2"> {{host.user}}</div>
-    
-    <div class="col-md-4"><h1>{{host.name}}</h1> </div>
-    
-    <div class="col-md-6"></div>
-    
-    <div class="col-md-8"><div class="btn btn-success" type="submit"> host.attractions </div>
-    
-    <div class="col-md-10"><div class="btn btn-success" type="submit">host.events </div>
-    
-    <div class="row">
-        <!--html pictures go here-->
 
-        <div class="col-md-offset-4 col-md-6">
-            <br />
-            <br />
-            <br />
-        I'm a picture
-            <br />
-            <br />
-            <br />
-            {{host.url}}
+    <div class="col-md-2"> {{host.user}}</div>
+
+    <div class="col-md-4"><h1>{{host.name}}</h1> </div>
+
+    <div class="col-md-6"></div>
+
+    <div class="col-md-8">
+        <div class="btn btn-success" type="submit"> host.attractions </div>
+
+        <div class="col-md-10">
+            <div class="btn btn-success" type="submit">host.events </div>
+
+            <div class="row">
+                <!--html pictures go here-->
+
+                <div class="col-md-offset-4 col-md-6">
+                    <br />
+                    <br />
+                    <br />
+                    I'm a picture
+                    <br />
+                    <br />
+                    <br />
+                    {{host.url}}
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
