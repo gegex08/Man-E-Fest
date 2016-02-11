@@ -10,7 +10,6 @@ namespace GroupProjectFestivalApp.Infrastructure
     public class EventRepository : GenericRepository<Event>
     {
         public EventRepository(DbContext db) : base(db) { }
-
     }
    
 }
