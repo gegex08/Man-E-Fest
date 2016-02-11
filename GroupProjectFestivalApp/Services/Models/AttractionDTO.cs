@@ -11,5 +11,9 @@ namespace GroupProjectFestivalApp.Services.Models {
         public string Description { get; set; }
 
         public int Rating { get; set; }
+
+        public string PictureUrl { get; set; }
+
+        public string SoundUrl { get; set; }
     }
 }
