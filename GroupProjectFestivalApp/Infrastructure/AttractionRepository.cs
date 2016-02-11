@@ -7,9 +7,8 @@ using System.Web;
 
 namespace GroupProjectFestivalApp.Infrastructure
 {
-    public class EventRepository : GenericRepository<Event>
+    public class AttractionRepository : GenericRepository<Attraction>
     {
-        public EventRepository(DbContext db) : base(db) { }
+        public AttractionRepository(DbContext db) : base(db) { }
     }
-   
 }

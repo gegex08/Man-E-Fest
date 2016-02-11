@@ -7,9 +7,9 @@ using System.Web;
 
 namespace GroupProjectFestivalApp.Infrastructure
 {
-    public class EventRepository : GenericRepository<Event>
+    public class CommentRepository : GenericRepository<Comment>
     {
-        public EventRepository(DbContext db) : base(db) { }
+        public CommentRepository(DbContext db) : base(db) { }
+
+        }
     }
-   
-}
