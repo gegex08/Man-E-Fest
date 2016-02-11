@@ -5,7 +5,7 @@
         public hosts;
 
         constructor(private $http: ng.IHttpService) {
-            $http.get(`/api/hosts`)
+            $http.get('/api/hosts')
                 .then((response) => {
                     this.hosts = response.data;
                 });
