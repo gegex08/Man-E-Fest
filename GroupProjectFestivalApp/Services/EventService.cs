@@ -25,7 +25,9 @@ namespace GroupProjectFestivalApp.Services {
                         Attraction = new AttractionDTO() {
                             Name = e.Attraction.Name,
                             Description = e.Attraction.Description,
-                            Rating = (int) e.Attraction.Rating
+                            Rating = (int) e.Attraction.Rating,
+                            SoundUrl = e.Attraction.Sound,
+                            PictureUrl = e.Attraction.PictureUrl
                         },
                         Tags = (from t in e.Tags
                                select t.Name).ToList(),

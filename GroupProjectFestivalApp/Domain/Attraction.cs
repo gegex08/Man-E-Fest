@@ -12,6 +12,10 @@ namespace GroupProjectFestivalApp.Domain
 
         public int Id { get; set; }
 
+        public string Sound { get; set; }
+
+        public string PictureUrl { get; set; }
+
         public IList<Event> Events { get; set; }
 
         public string Name { get; set; }
