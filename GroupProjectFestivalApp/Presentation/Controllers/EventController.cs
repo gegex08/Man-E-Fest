@@ -25,6 +25,7 @@ namespace GroupProjectFestivalApp.Presentation.Controllers {
 
         [HttpPost]
         [Authorize]
+        //[Route("api/events/{id}")]
         [Route("api/events/{id}/rating")]
         public IHttpActionResult AddComment(int id, CommentBindingModel comment) {
             if (ModelState.IsValid) {

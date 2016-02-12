@@ -49,6 +49,7 @@ namespace GroupProjectFestivalApp.Services {
                 .Include(e => e.Attraction.Events)
                 .Include(e => e.Comments)
                 .FirstOrDefault();
+
             var user = _userRepo.FindByUsername(userName).FirstOrDefault();
 
             var oldRating = eve.Rating;
@@ -68,12 +69,13 @@ namespace GroupProjectFestivalApp.Services {
             _commentRepo.SaveChanges();
 
             return new CommentDTO() {
-                Message = newComment.Message,
-                Event = eve,
 
+            return new CommentDTO() {
+                Message = comment.Message,
+                Event = comment.Event
             };
         }
-
+       
         public IList<CommentDTO> GetComment() {
             return (from c in _commentRepo.List()
                     select new CommentDTO() {
