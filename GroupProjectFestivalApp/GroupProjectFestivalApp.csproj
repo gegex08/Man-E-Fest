@@ -228,6 +228,10 @@
     <Compile Include="Migrations\201602111611302_updated sound model.Designer.cs">
       <DependentUpon>201602111611302_updated sound model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602120009228_changed model.cs" />
+    <Compile Include="Migrations\201602120009228_changed model.Designer.cs">
+      <DependentUpon>201602120009228_changed model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\EventController.cs" />
@@ -347,6 +351,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602111611302_updated sound model.resx">
       <DependentUpon>201602111611302_updated sound model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602120009228_changed model.resx">
+      <DependentUpon>201602120009228_changed model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
