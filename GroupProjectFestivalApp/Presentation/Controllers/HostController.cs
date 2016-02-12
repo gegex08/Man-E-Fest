@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace GroupProjectFestivalApp.Presentation.Controllers {
-    public class HostController : ApiController{
+    public class HostController : ApiController {
 
 
         private HostService _hostService;
@@ -19,11 +19,9 @@ namespace GroupProjectFestivalApp.Presentation.Controllers {
 
         [HttpGet]
         [Route("api/hosts")]
-        public IList<HostDTO> Get()
-        {
+        public IList<HostDTO> Get() {
             return _hostService.GetHost();
 
         }
-            
     }
 }

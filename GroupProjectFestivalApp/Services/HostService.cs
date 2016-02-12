@@ -5,23 +5,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace GroupProjectFestivalApp.Services
-{
-    public class HostService
-    {
+namespace GroupProjectFestivalApp.Services {
+    public class HostService {
         private HostRepository _hostRepo;
 
-        public HostService(HostRepository hostRepo)
-        {
+        public HostService(HostRepository hostRepo) {
             _hostRepo = hostRepo;
         }
-        public IList<HostDTO> GetHost()
-        {
-
+        public IList<HostDTO> GetHost() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
             return (from f in _hostRepo.List()
-                    select new HostDTO()
-                    {
-                        
+                    select new HostDTO() {
+
                         Id = f.Id,
                         Url = f.Url,
                         Name = f.Name,
