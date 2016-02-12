@@ -12,17 +12,14 @@ using GroupProjectFestivalApp.Providers;
 using GroupProjectFestivalApp.Models;
 using GroupProjectFestivalApp.Infrastructure;
 
-namespace GroupProjectFestivalApp
-{
-    public partial class Startup
-    {
+namespace GroupProjectFestivalApp {
+    public partial class Startup {
         public static OAuthAuthorizationServerOptions OAuthOptions { get; private set; }
 
         public static string PublicClientId { get; private set; }
 
         // For more information on configuring authentication, please visit http://go.microsoft.com/fwlink/?LinkId=301864
-        public void ConfigureAuth(IAppBuilder app)
-        {
+        public void ConfigureAuth(IAppBuilder app) {
             // Configure the db context and user manager to use a single instance per request
             app.CreatePerOwinContext(ApplicationDbContext.Create);
             app.CreatePerOwinContext<ApplicationUserManager>(ApplicationUserManager.Create);
@@ -34,8 +31,7 @@ namespace GroupProjectFestivalApp
 
             // Configure the application for OAuth based flow
             PublicClientId = "self";
-            OAuthOptions = new OAuthAuthorizationServerOptions
-            {
+            OAuthOptions = new OAuthAuthorizationServerOptions {
                 TokenEndpointPath = new PathString("/Token"),
                 Provider = new ApplicationOAuthProvider(PublicClientId),
                 AuthorizeEndpointPath = new PathString("/api/Account/ExternalLogin"),
@@ -52,12 +48,12 @@ namespace GroupProjectFestivalApp
             //    clientId: "",
             //app.UseMicrosoftAccountAuthentication(
             //    clientId: "",
-           // app.UseMicrosoftAccountAuthentication(
-           //     clientId: "",
+            // app.UseMicrosoftAccountAuthentication(
+            //     clientId: "",
             //    clientSecret: "");
 
             //app.UseTwitterAuthentication(
-           // app.UseTwitterAuthentication(
+            // app.UseTwitterAuthentication(
             //    consumerKey: "",
             //    consumerSecret: "");
 

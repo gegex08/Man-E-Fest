@@ -21,8 +21,15 @@
                         this.events.apply(response.data);
                     })
                     .catch((response) => {
-                    }); 
+                    });
             }
+        }
+
+        public getComment() {
+            this.$http.get(`/api/comments`)
+                .then((response) => {
+                    this.comment = response.data;
+                });
         }
     }
 }
