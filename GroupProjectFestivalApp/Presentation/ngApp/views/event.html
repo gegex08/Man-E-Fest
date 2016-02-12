@@ -1,14 +1,16 @@
-﻿<div class="row" ng-repeat="event in controller.events">
-    <div class="col-lg-offset-1 col-md-5">
-        <h3> Joining us today is {{event.attraction.name}}!!</h3>
-    </div>
-    <div class="col-lg-offset-1 col-md-4">
-        Starting at :  {{event.startTime}}
-        <br />
-        Until :  {{event.endTime}}
+﻿<div class="row" ng-repeat-start="event in controller.events">
+    <div class="col-md-12">
+        <div class="col-md-offset-1 col-md-5">
+            <h3> Joining us today is {{event.attraction.name}}!!</h3>
+        </div>
+        <div class="col-md-offset-1 col-md-5">
+            Starting at :  {{event.startTime}}
+            <br />
+            Until :  {{event.endTime}}
+        </div>
     </div>
     <div class="col-lg-offset-4 col-md-1">
-        {{event.pin}}
+        PIN: {{event.pin}}
     </div>
     <div class="col-lg-offset-5 col-md-5">
         {{event.tags.name}}
@@ -25,37 +27,23 @@
         </div>
     </div>
 
-
-    <form class="col-md-offset-3 col-md-6" ng-submit="">
-        <textarea style="font-size:12pt; height:100px; width:600px " placeholder="Enter Comments" class="form-control" ng-model="comment.message"></textarea>
-        <div class="col-md-offset-8 col-md-6">
-            <div class="rate">
-                <label>
-                    <input type="radio" ng-model="comment.rating" value="5" />
-                    5 stars
-                </label>
-                <label>
-                    <input type="radio" ng-model="comment.rating" value="4" />
-                    4 stars
-                </label>
-                <label>
-                    <input type="radio" ng-model="comment.rating" value="3" />
-                    3 stars
-                </label>
-                <label>
-                    <input type="radio" ng-model="comment.rating" value="2" />
-                    2 stars
-                </label>
-                <label>
-                    <input type="radio" ng-model="comment.rating" value="1" />
-                    1 star
-                </label>
-            </div>
-        </div>
-        <br />
-
-        <div class="col-md-offset-8 col-md-6">
-            <input class="btn btn-success" type="submit" value="Submit" />
-        </div>
-    </form>
 </div>
+<form class="comment row" ng-submit="controller.addComment(event.id, comment)" ng-repeat-end>
+    <div class="stars {{starsDisabled?'inactive':''}}" ng-init="starsDisabled = false;">
+        <span>Rating:</span>
+        <span class="rate">
+            <input type="radio" ng-model="comment.rating" value="5" id="rating5" ng-disabled="starsDisabled" />
+            <label for="rating5"></label>
+            <input type="radio" ng-model="comment.rating" value="4" id="rating4" ng-disabled="starsDisabled" />
+            <label for="rating4"></label>
+            <input type="radio" ng-model="comment.rating" value="3" id="rating3" ng-disabled="starsDisabled" />
+            <label for="rating3"></label>
+            <input type="radio" ng-model="comment.rating" value="2" id="rating2" ng-disabled="starsDisabled" />
+            <label for="rating2"></label>
+            <input type="radio" ng-model="comment.rating" value="1" id="rating1" ng-disabled="starsDisabled" />
+            <label for="rating1"></label>
+        </span>
+    </div>
+    <textarea rows="5" placeholder="Enter Comments" class="form-control" ng-model="comment.message"></textarea>
+    <input class="btn btn-success" type="submit" value="Submit" />
+</form>

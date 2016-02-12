@@ -13,7 +13,9 @@
 
         public addComment(eventid, comment): void {
             if (comment) {
-                this.$http.post(`/api/addComment`, {
+                //this.$http.post(`/api/addComment`, {
+                this.$http.post(`/api/${eventid}`, {
+
                     eventId: this.events.message,
                     comment: comment
                 })
