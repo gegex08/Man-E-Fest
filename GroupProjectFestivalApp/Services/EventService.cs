@@ -68,7 +68,6 @@ namespace GroupProjectFestivalApp.Services {
             _commentRepo.Add(comment);
             _commentRepo.SaveChanges();
 
-            return new CommentDTO() {
 
             return new CommentDTO() {
                 Message = comment.Message,
@@ -82,7 +81,6 @@ namespace GroupProjectFestivalApp.Services {
                         Id = c.Id,
                         Event = c.Event,
                         Message = c.Message,
-                        Rating = (int)c.Event.Rating,
                     }).ToList();
         }
     }
