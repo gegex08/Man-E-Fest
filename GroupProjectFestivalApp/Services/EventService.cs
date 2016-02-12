@@ -80,7 +80,7 @@ namespace GroupProjectFestivalApp.Services {
                         Id = c.Id,
                         Event = c.Event,
                         Message = c.Message,
-                        Rating = (int)c.Event.Rating
+                        Rating = (int)c.Event.Rating,
                     }).ToList();
         }
     }

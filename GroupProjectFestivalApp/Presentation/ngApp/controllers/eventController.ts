@@ -3,6 +3,7 @@
     export class EventController {
 
         public events;
+        public comments;
 
         constructor(private $http: ng.IHttpService, private $routeParams) {
             $http.get(`/api/events`)
@@ -28,7 +29,7 @@
         public getComment() {
             this.$http.get(`/api/comments`)
                 .then((response) => {
-                    this.comment = response.data;
+                    this.comments = response.data;
                 });
         }
     }

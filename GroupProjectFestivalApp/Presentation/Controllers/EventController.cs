@@ -16,6 +16,7 @@ namespace GroupProjectFestivalApp.Presentation.Controllers {
             _eventService = eventService;
         }
 
+
         [HttpGet]
         [Route("api/events")]
         public IList<EventDTO> Get() {
