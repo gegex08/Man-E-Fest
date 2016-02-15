@@ -26,7 +26,7 @@
     </div>
 
 
-    <form class="col-md-offset-3 col-md-6" ng-submit="">
+    <form class="col-md-offset-3 col-md-6" ng-submit="controller.addComment(event.id, comment)" >
         <textarea style="font-size:12pt; height:100px; width:600px " placeholder="Enter Comments" class="form-control" ng-model="comment.message"></textarea>
         <div class="col-md-offset-8 col-md-6">
             <div class="rate">

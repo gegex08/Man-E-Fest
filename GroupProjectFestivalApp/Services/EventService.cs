@@ -75,12 +75,8 @@ namespace GroupProjectFestivalApp.Services
             _commentRepo.Add(comment);
             _commentRepo.SaveChanges();
 
-            return new CommentDTO()
-            {
-                Message = newComment.Message,
-                Event = eve,
-               
-            };
+            return new CommentDTO();
+
         }
     }
 }

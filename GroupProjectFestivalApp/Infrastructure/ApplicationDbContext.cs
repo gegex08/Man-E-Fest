@@ -21,5 +21,6 @@ namespace GroupProjectFestivalApp.Infrastructure {
         public IDbSet<Tag> Tags { get; set; }
         public IDbSet<Pushpin> Pushpins { get; set; }
         public IDbSet<Event> Events { get; set; }
+        public IDbSet<Comment> Comments { get; set; }
     }
 }
