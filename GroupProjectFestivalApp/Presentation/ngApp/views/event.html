@@ -9,6 +9,23 @@
             Until :  {{event.endTime}}
         </div>
     </div>
+
+    <div>
+        <h4> Current Average Rating:{{event.rating}}Star(s)</h4>
+
+
+            <ol>
+                <li ng-class="{active:model>4,over:over>4}" class="active">5</li>
+                <li ng-class="{active:model>3,over:over>3}" class="active">4</li>
+                <li ng-class="{active:model>2,over:over>2}" class="active">3</li>
+                <li ng-class="{active:model>1,over:over>1}" class="active">2</li>
+                <li ng-class="{active:model>0,over:over>0}" class="active">1</li>
+            </ol>
+
+
+
+    </div>
+
     <div class="col-lg-offset-4 col-md-1">
         PIN: {{event.pin}}
     </div>
@@ -28,7 +45,7 @@
     </div>
 
 </div>
-<form class="comment row" ng-submit="controller.addComment(event.id, comment)" ng-repeat-end>
+<form class="comment row" ng-submit="controller.addComment(event, comment)" ng-repeat-end>
     <div class="stars {{starsDisabled?'inactive':''}}" ng-init="starsDisabled = false;">
         <span>Rating:</span>
         <span class="rate">
@@ -47,3 +64,4 @@
     <textarea rows="5" placeholder="Enter Comments" class="form-control" ng-model="comment.message"></textarea>
     <input class="btn btn-success" type="submit" value="Submit" />
 </form>
+

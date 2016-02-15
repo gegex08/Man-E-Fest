@@ -12,30 +12,21 @@
                 });
         }
 
-        public addComment(eventid, comment): void {
-            console.log(eventid);
-            console.log(comment);
+        public addComment(event, comment): void {
             if (comment) {
-                this.$http.post(`api/events/${eventid}`, {
-                //this.$http.post(`/api/addComment`, {
-                this.$http.post(`/api/${eventid}`, {
+                this.$http.post(`api/events/${event.id}`, comment)
 
-                    eventId: this.events.message,
-                    comment: comment
-                })
                     .then((response) => {
-                        this.events.apply(response.data);
+                        let eventDto:any = response.data; // eventdto
+                        event.rating = eventDto.rating;
+                        event.attraction.rating = eventDto.attraction.rating;
+
+                        alert('Thank you for your feedback!');
                     })
                     .catch((response) => {
+                        alert('There was an error. Sorry :(');
                     });
             }
-        }
-
-        public getComment() {
-            this.$http.get(`/api/comments`)
-                .then((response) => {
-                    this.comments = response.data;
-                });
         }
     }
 }
