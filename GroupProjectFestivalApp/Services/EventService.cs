@@ -44,7 +44,7 @@ namespace GroupProjectFestivalApp.Services {
                         Rating = (int)e.Rating
                     }).ToList();
         }
-        public CommentDTO AddComment(int eventId, string userName, CommentBindingModel newComment) {
+        public EventDTO AddComment(int eventId, string userName, CommentBindingModel newComment) {
             var eve = _eventRepo.Get(eventId)
                 .Include(e => e.Attraction.Events)
                 .Include(e => e.Comments)
@@ -68,11 +68,17 @@ namespace GroupProjectFestivalApp.Services {
             _commentRepo.Add(comment);
             _commentRepo.SaveChanges();
 
-
-            return new CommentDTO() {
-                Message = comment.Message,
-                Event = comment.Event
+            return new EventDTO()
+            {
+                Rating = (int)eve.Rating,
+                Attraction = new AttractionDTO()
+                {
+                    Rating = (int)eve.Attraction.Rating
+                }
             };
+            
+
+           
         }
        
         public IList<CommentDTO> GetComment() {

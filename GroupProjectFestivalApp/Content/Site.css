@@ -63,6 +63,33 @@ h3 {
 .stars:not(.inactive) .rate label:hover,
 .stars:not(.inactive) .rate label:hover ~ label { color: goldenrod !important;}
 
+.rate1 {
+  border: 1px solid #cccccc;
+  height: 46px;
+  padding: 0 10px;
+}
+
+.rate1 > label {
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
+}
+
+.rate1 {
+    unicode-bidi: bidi-override;
+    direction: rtl;
+}
+
+.rate1 input {display: none;}
+.rate1 label:before {content:'★';}
+
+
+.rate1 input:checked ~ label { color: gold; }
+
+
 .comment textarea {
     resize: vertical;
     font-size: 1.2em;

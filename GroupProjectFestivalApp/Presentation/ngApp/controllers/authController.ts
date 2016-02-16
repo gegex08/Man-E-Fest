@@ -26,6 +26,7 @@
                     this.$location.path('/');
                 })
                 .catch((response) => {
+                    console.log("login error");
                     console.log(response);
                 });
         }

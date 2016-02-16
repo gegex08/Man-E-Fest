@@ -9,6 +9,31 @@
             Until :  {{event.endTime}}
         </div>
     </div>
+
+    <div>
+        <h4> Current Average Rating:{{event.rating}}Star(s)</h4>
+
+        <form class="comment row">
+            <div class="stars {{starsDisabled?'inactive':''}}">
+                <span>Rating:</span>
+                <span class="rate1">
+                    <inpup disabled type="radio" ng-model="event.rating" value="5" id="rating5"/>
+                    <label for="rating5"></label>
+                    <input disabled  type="radio" ng-model="event.rating" value="4" id="rating4"/>
+                    <label for="rating4"></label>
+                    <input disabled  type="radio" ng-model="event.rating" value="3" id="rating3"/>
+                    <label for="rating3"></label>
+                    <input disabled  type="radio" ng-model="event.rating" value="2" id="rating2"/>
+                    <label for="rating2"></label>
+                    <input disabled  type="radio" ng-model="event.rating" value="1" id="rating1"/>
+                    <label for="rating1"></label>
+                </span>
+            </div>
+        </form>
+
+
+    </div>
+
     <div class="col-lg-offset-4 col-md-1">
         PIN: {{event.pin}}
     </div>
@@ -28,7 +53,7 @@
     </div>
 
 </div>
-<form class="comment row" ng-submit="controller.addComment(event.id, comment)" ng-repeat-end>
+<form class="comment row" ng-submit="controller.addComment(event, comment)" ng-repeat-end>
     <div class="stars {{starsDisabled?'inactive':''}}" ng-init="starsDisabled = false;">
         <span>Rating:</span>
         <span class="rate">
@@ -47,3 +72,4 @@
     <textarea rows="5" placeholder="Enter Comments" class="form-control" ng-model="comment.message"></textarea>
     <input class="btn btn-success" type="submit" value="Submit" />
 </form>
+
