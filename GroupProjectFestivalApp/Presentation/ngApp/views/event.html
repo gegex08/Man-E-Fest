@@ -13,15 +13,23 @@
     <div>
         <h4> Current Average Rating:{{event.rating}}Star(s)</h4>
 
-
-            <ol>
-                <li ng-class="{active:model>4,over:over>4}" class="active">5</li>
-                <li ng-class="{active:model>3,over:over>3}" class="active">4</li>
-                <li ng-class="{active:model>2,over:over>2}" class="active">3</li>
-                <li ng-class="{active:model>1,over:over>1}" class="active">2</li>
-                <li ng-class="{active:model>0,over:over>0}" class="active">1</li>
-            </ol>
-
+        <form class="comment row">
+            <div class="stars {{starsDisabled?'inactive':''}}">
+                <span>Rating:</span>
+                <span class="rate1">
+                    <inpup disabled type="radio" ng-model="event.rating" value="5" id="rating5"/>
+                    <label for="rating5"></label>
+                    <input disabled  type="radio" ng-model="event.rating" value="4" id="rating4"/>
+                    <label for="rating4"></label>
+                    <input disabled  type="radio" ng-model="event.rating" value="3" id="rating3"/>
+                    <label for="rating3"></label>
+                    <input disabled  type="radio" ng-model="event.rating" value="2" id="rating2"/>
+                    <label for="rating2"></label>
+                    <input disabled  type="radio" ng-model="event.rating" value="1" id="rating1"/>
+                    <label for="rating1"></label>
+                </span>
+            </div>
+        </form>
 
 
     </div>
