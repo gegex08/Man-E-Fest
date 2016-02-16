@@ -31,6 +31,5 @@ namespace GroupProjectFestivalApp.Domain {
 
         public bool Active { get; set; } = true;
 
-
     }
 }
