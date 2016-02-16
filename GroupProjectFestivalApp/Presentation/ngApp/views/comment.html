@@ -1,15 +1,41 @@
 ﻿<div>
-    <div ng-repeat="comment in controller.event">
-        Tag Name {{event.comment}}
-    Tag Name/Category
-    </div>
-    <div>
-        Attraction:
-        <div>
-            Comment/Tag
+    <div class="row" ng-repeat="comment in controller.comments">
+        <div class="row">
+            <img src="http://www.adsitsolutions.com/images/icons/grey/home-user-icon.png"
+                 height="75"
+                 width="75" />
+            <br />
+            <strong>
+                User
+            </strong>
+            <br />
         </div>
-    </div>
-    <div>
-        Pin
+        <div class="table-bordered" ng-show="attraction in controller.comments">
+            <div>
+                <strong>
+                    Attraction: 
+                </strong>
+                <p>
+                    SxSW
+                {{comment.attraction}}
+                </p>
+            </div>
+            <div>
+                <strong>
+                   #Tag
+                </strong>
+            </div>
+            <div>
+                {{comment.message}}
+                <br />
+            </div>
+        </div>
+        <br />
+        <div class="table-bordered" 20px>
+            <strong>
+                Pin
+            </strong>
+        </div>
+        <hr />
     </div>
 </div>

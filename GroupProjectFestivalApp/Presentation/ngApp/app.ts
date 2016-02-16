@@ -56,7 +56,7 @@
             });
             $routeProvider.when('/comments', {
                 templateUrl: '/Presentation/ngApp/views/comment.html',
-                controller: GroupProjectFestivalApp.Controllers.EventController,
+                controller: GroupProjectFestivalApp.Controllers.CommentController,
                 controllerAs: 'controller'
             });
         });
