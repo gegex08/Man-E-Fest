@@ -9,16 +9,16 @@ using System.Web.Http;
 namespace GroupProjectFestivalApp.Presentation.Controllers {
     public class CommentController : ApiController {
 
-        private EventService _eventService;
+        private CommentService _commentService;
 
-        public CommentController(EventService eventService) {
-            _eventService = eventService;
+        public CommentController(CommentService commentService) {
+            _commentService = commentService;
         }
 
         [HttpGet]
         [Route("api/event/comments")]
         public IList<CommentDTO> GetComment() {
-            return _eventService.GetComment();
+            return _commentService.GetComment();
         }
     }
 }

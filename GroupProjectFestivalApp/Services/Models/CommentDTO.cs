@@ -1,4 +1,5 @@
 ﻿using GroupProjectFestivalApp.Domain;
+using GroupProjectFestivalApp.Services.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -11,8 +12,8 @@ namespace GroupProjectFestivalApp.Services {
 
         public string Message { get; set; }
 
-        public Event Event { get; set; }
+        public EventDTO Event { get; set; }
 
-
+        public ApplicationUserDTO User { get; set; }
     }
 }

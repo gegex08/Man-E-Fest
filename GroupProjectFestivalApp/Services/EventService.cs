@@ -41,7 +41,7 @@ namespace GroupProjectFestivalApp.Services {
                         Tags = (from t in e.Tags
                                 select t.Name).ToList(),
                         Host = e.Host.Name,
-                        Rating = (int)e.Rating
+                        Rating = (int)e.Rating,
                     }).ToList();
         }
         public EventDTO AddComment(int eventId, string userName, CommentBindingModel newComment) {
@@ -81,13 +81,6 @@ namespace GroupProjectFestivalApp.Services {
            
         }
        
-        public IList<CommentDTO> GetComment() {
-            return (from c in _commentRepo.List()
-                    select new CommentDTO() {
-                        Id = c.Id,
-                        Message = c.Message,
-                        Event = c.Event,
-                    }).ToList();
-        }
+
     }
 }

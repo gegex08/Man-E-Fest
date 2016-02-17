@@ -25,5 +25,8 @@ namespace GroupProjectFestivalApp.Services.Models {
 
         [Required]
         public int Rating { get; set; }
+
+        public ApplicationUserDTO Users { get; set; }
+
     }
 }

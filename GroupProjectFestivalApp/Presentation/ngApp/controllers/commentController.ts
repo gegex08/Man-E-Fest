@@ -12,17 +12,11 @@
         }
 
         public getTag(tags): void {
-            this.$http.get(`api/events/comments`)
+            this.$http.get(`api/event/comments`)
                 .then((response) => {
                     this.comments = response.data
                 })
         }
 
-        public getAttractions(events): void {
-            this.$http.get(`/api/events/attractions`)
-                .then((response) => {
-                    this.attractions = response.data;
-                });
-        }
     }
 }

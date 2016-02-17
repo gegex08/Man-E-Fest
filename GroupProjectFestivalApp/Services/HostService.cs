@@ -13,7 +13,6 @@ namespace GroupProjectFestivalApp.Services {
             _hostRepo = hostRepo;
         }
         public IList<HostDTO> GetHost() {
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
             return (from f in _hostRepo.List()
                     select new HostDTO() {
 
@@ -23,8 +22,12 @@ namespace GroupProjectFestivalApp.Services {
                         Pushpins = f.Pushpins,
                         Events = f.Events,
                         Attractions = f.Attractions,
-                        User = f.User
+                        User = new ApplicationUserDTO() {
+                            User = f.User.UserName
+                        }
                     }).ToList();
         }
+
+
     }
 }
