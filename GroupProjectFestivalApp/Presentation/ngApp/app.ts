@@ -49,9 +49,14 @@
                 controller: GroupProjectFestivalApp.Controllers.EventController,
                 controllerAs: 'controller'
             });
-            $routeProvider.when('attractions', {
-                templateUrl: '/Presentation/ngApp/views/.attractionList.html',
+            $routeProvider.when('/attractions', {
+                templateUrl: '/Presentation/ngApp/views/attractionList.html',
                 controller: GroupProjectFestivalApp.Controllers.AttractionController,
+                controllerAs: 'controller'
+            });
+            $routeProvider.when('/comments', {
+                templateUrl: '/Presentation/ngApp/views/comment.html',
+                controller: GroupProjectFestivalApp.Controllers.CommentController,
                 controllerAs: 'controller'
             });
         });

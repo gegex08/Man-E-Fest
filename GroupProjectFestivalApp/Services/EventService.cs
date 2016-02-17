@@ -85,8 +85,8 @@ namespace GroupProjectFestivalApp.Services {
             return (from c in _commentRepo.List()
                     select new CommentDTO() {
                         Id = c.Id,
-                        Event = c.Event,
                         Message = c.Message,
+                        Event = c.Event,
                     }).ToList();
         }
     }

@@ -17,7 +17,7 @@
                 this.$http.post(`api/events/${event.id}`, comment)
 
                     .then((response) => {
-                        let eventDto:any = response.data; // eventdto
+                        let eventDto: any = response.data; // eventdto
                         event.rating = eventDto.rating;
                         event.attraction.rating = eventDto.attraction.rating;
 
@@ -28,5 +28,8 @@
                     });
             }
         }
+
+
+
     }
 }

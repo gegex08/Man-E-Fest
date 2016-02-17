@@ -1,0 +1,38 @@
+﻿<div>
+    <h3>
+        #Tag
+    </h3>
+    <div class="row" ng-repeat="comment in controller.comments">
+        <div class="row">
+            <img src="http://www.adsitsolutions.com/images/icons/grey/home-user-icon.png"
+                 height="75"
+                 width="75" />
+            <br />
+            <strong>
+                User
+            </strong>
+            <br />
+        </div>
+        <div class="table-bordered" ng-show="attraction in controller.comments">
+            <div>
+                <h4>
+                <strong>
+                    Attraction:
+                </strong>
+                SxSW
+                </h4>
+                <p>
+                    {{comment.attraction}}
+                </p>
+            </div>
+            <div>
+                {{comment.message}}
+                <br />
+            </div>
+        </div>
+        <br />
+        <div class="text-right">
+            <button type="button" class="btn btn-info">Pin</button>
+        </div>
+    </div>
+</div>
