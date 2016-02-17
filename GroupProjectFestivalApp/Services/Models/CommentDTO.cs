@@ -15,5 +15,9 @@ namespace GroupProjectFestivalApp.Services {
         public EventDTO Event { get; set; }
 
         public ApplicationUserDTO User { get; set; }
+
+        public IList<Tag> Tags { get; set; }
+
+        public AttractionDTO Attraction { get; set; }
     }
 }

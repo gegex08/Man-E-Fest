@@ -1,9 +1,7 @@
 ﻿<div>
-    <div ng-show="comment in controller.comments">
     <h3>
-        #Tag {{comment.tags}}
+        #Tag {{comment.event.tags}}
     </h3>
-    </div>
     <div class="row" ng-repeat="comment in controller.comments">
         <div class="row">
             <img src="http://www.adsitsolutions.com/images/icons/grey/home-user-icon.png"
@@ -18,10 +16,10 @@
         <div class="table-bordered">
             <div>
                 <h4>
-                <strong>
-                    Attraction:
-                </strong>
-                Linking Park {{comment.attraction}}
+                    <strong>
+                        Attraction:
+                    </strong>
+                    Linking Park {{comment.attraction}}
                 </h4>
                 <p>
                     {{comment.attraction}}
@@ -34,7 +32,7 @@
         </div>
         <br />
         <div class="text-right">
-            <button type="button" class="btn btn-info">Pin</button>
+            Pin : {{comment.event.pushpin}}
         </div>
     </div>
 </div>
