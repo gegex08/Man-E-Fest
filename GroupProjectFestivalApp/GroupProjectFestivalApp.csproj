@@ -272,6 +272,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Images\foldedmapimageforhomepagelink.jpg" />
+    <Content Include="Images\maplinkpictureforhomepage.png" />
     <Content Include="Presentation\ngApp\.gitignore" />
     <Content Include="Presentation\ngApp\views\attractionList.html" />
     <Content Include="Presentation\ngApp\views\event.html" />

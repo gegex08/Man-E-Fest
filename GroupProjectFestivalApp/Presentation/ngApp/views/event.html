@@ -1,45 +1,44 @@
-﻿<div class="row" ng-repeat-start="event in controller.events">
+﻿<div class="row" ng-repeat="event in controller.events">
     <div class="col-md-12">
-        <div class="col-md-offset-1 col-md-5">
-            <h3> Joining us today is {{event.attraction.name}}!!</h3>
+        <div class="boxtext">
+            <h3><strong> Today's attraction is {{event.attraction.name}} !</strong></h3>
+            <form class="comment row">
+                <div class="stars1 {{starsDisabled?'inactive':''}}">
+                    <h4>
+                        Average Rating:
+                        <span class="rate1">
+                            <inpup disabled type="radio" ng-model="event.rating" value="5" />
+                            <label for="rating5"></label>
+                            <input disabled type="radio" ng-model="event.rating" value="4" />
+                            <label for="rating4"></label>
+                            <input disabled type="radio" ng-model="event.rating" value="3" />
+                            <label for="rating3"></label>
+                            <input disabled type="radio" ng-model="event.rating" value="2" />
+                            <label for="rating2"></label>
+                            <input disabled type="radio" ng-model="event.rating" value="1" />
+                            <label for="rating1"></label>
+                        </span>
+                    </h4>
+                </div>
+            </form>
+
+            <h2>
+                Starting at : {{event.startTime | date:"short"}}<br />
+                Until :  {{event.endTime  | date:"short"}}
+            </h2>
+            <span style="display: block; margin: 0px auto; text-align: left;">
+                PIN: {{event.pins}}
+            </span>
         </div>
-        <div class="col-md-offset-1 col-md-5">
-            Starting at :  {{event.startTime}}
-            <br />
-            Until :  {{event.endTime}}
+        <div class="boxtext">
+            <span style="display: block; margin: 0px auto; text-align: left;">
+                Latest Comments: {{event.tags}}{{event.comments}}
+            </span>
         </div>
-    </div>
-
-    <div>
-        <h4> Current Average Rating:{{event.rating}}Star(s)</h4>
-
-        <form class="comment row">
-            <div class="stars {{starsDisabled?'inactive':''}}">
-                <span>Rating:</span>
-                <span class="rate1">
-                    <inpup disabled type="radio" ng-model="event.rating" value="5" id="rating5"/>
-                    <label for="rating5"></label>
-                    <input disabled  type="radio" ng-model="event.rating" value="4" id="rating4"/>
-                    <label for="rating4"></label>
-                    <input disabled  type="radio" ng-model="event.rating" value="3" id="rating3"/>
-                    <label for="rating3"></label>
-                    <input disabled  type="radio" ng-model="event.rating" value="2" id="rating2"/>
-                    <label for="rating2"></label>
-                    <input disabled  type="radio" ng-model="event.rating" value="1" id="rating1"/>
-                    <label for="rating1"></label>
-                </span>
-            </div>
-        </form>
-
 
     </div>
+    <br />
 
-    <div class="col-lg-offset-4 col-md-1">
-        PIN: {{event.pin}}
-    </div>
-    <div class="col-lg-offset-5 col-md-5">
-        {{event.tags.name}}
-    </div>
     <div class="col-lg-offset-2 col-md-3">
         <img ng-src="{{event.attraction.pictureUrl}}" height="500" width="800" />
         <div class="col-md-offset-12 col-md-12">
@@ -51,25 +50,26 @@
 
         </div>
     </div>
-
 </div>
-<form class="comment row" ng-submit="controller.addComment(event, comment)" ng-repeat-end>
-    <div class="stars {{starsDisabled?'inactive':''}}" ng-init="starsDisabled = false;">
-        <span>Rating:</span>
-        <span class="rate">
-            <input type="radio" ng-model="comment.rating" value="5" id="rating5" ng-disabled="starsDisabled" />
-            <label for="rating5"></label>
-            <input type="radio" ng-model="comment.rating" value="4" id="rating4" ng-disabled="starsDisabled" />
-            <label for="rating4"></label>
-            <input type="radio" ng-model="comment.rating" value="3" id="rating3" ng-disabled="starsDisabled" />
-            <label for="rating3"></label>
-            <input type="radio" ng-model="comment.rating" value="2" id="rating2" ng-disabled="starsDisabled" />
-            <label for="rating2"></label>
-            <input type="radio" ng-model="comment.rating" value="1" id="rating1" ng-disabled="starsDisabled" />
-            <label for="rating1"></label>
-        </span>
-    </div>
-    <textarea rows="5" placeholder="Enter Comments" class="form-control" ng-model="comment.message"></textarea>
-    <input class="btn btn-success" type="submit" value="Submit" />
-</form>
 
+<div class="boxtext">
+    <form class="comment row" ng-submit="controller.addComment(event, comment)">
+        <div class="stars {{starsDisabled?'inactive':''}}" ng-init="starsDisabled = false;">
+            <h4>Your Rating:</h4>
+            <span class="rate">
+                <input enabled type="radio" ng-model="comment.rating" value="5" id="rating5" ng-disabled="starsDisabled" />
+                <label for="rating5"></label>
+                <input enabled type="radio" ng-model="comment.rating" value="4" id="rating4" ng-disabled="starsDisabled" />
+                <label for="rating4"></label>
+                <input enabled type="radio" ng-model="comment.rating" value="3" id="rating3" ng-disabled="starsDisabled" />
+                <label for="rating3"></label>
+                <input enabled type="radio" ng-model="comment.rating" value="2" id="rating2" ng-disabled="starsDisabled" />
+                <label for="rating2"></label>
+                <input enabled type="radio" ng-model="comment.rating" value="1" id="rating1" ng-disabled="starsDisabled" />
+                <label for="rating1"></label>
+            </span>
+        </div>
+        <textarea rows="5" placeholder="Enter Comments" class="form-control" ng-model="comment.message"></textarea>
+        <input class="btn btn-success" type="submit" value="Submit" />
+    </form>
+</div>

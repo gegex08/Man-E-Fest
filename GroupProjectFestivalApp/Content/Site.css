@@ -1,17 +1,39 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background: #333f46;
-    font-family: courier;
-    color: #cfb7ae;
+    background-color: #00518b;
+    background-image: url("https://consequenceofsound.files.wordpress.com/2014/10/sxsw-2015.png?w=807");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Rockwell";
+    color: #3bc57f;
 }
 
 h1 {
-    color: red;
-    font-family: courier;
-    font-family: verdana;
+    color: white;
+    font-family: "Rockwell";
     font-size: 300%;
 }
+
+h2 {
+    color: #2499bf;
+    font-family: "Rockwell";
+    font-size: 180%;
+}
+
+h3 {
+    font-size: 40pt;
+    color: #fd8244;
+    font-family: Rockwell;
+}
+
+h4 {
+    color: #3bc57f;
+    font-family: "Rockwell";
+    font-size: 180%;
+}
+
+
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
@@ -26,70 +48,83 @@ textarea {
     vertical-align: top;
     text-align: left;
     color: black;
-    font-family: 'Times New Roman';
+    font-family: "sans-serif";
 }
 
-h3 {
-    font-size: 40pt;
-    color: #9e8379;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+.boxtext {
+    background-color: rgba(46,44,41,.8);
+    border: 6px groove #a2a2a2;
+    border-radius: 10px;
+    padding: 10px 15px;
+    flex-direction: row;
+    text-align: center;
 }
+
 .rate {
-  border: 1px solid #cccccc;
-  height: 46px;
-  padding: 0 10px;
+    border: 1px solid #cccccc;
+    height: 46px;
+    padding: 0 10px;
 }
 
-.rate > label {
-  width: 1em;
-  overflow: hidden;
-  white-space: nowrap;
-  cursor: pointer;
-  font-size: 30px;
-  color: #ccc;
-}
+    .rate > label {
+        width: 1em;
+        overflow: hidden;
+        white-space: nowrap;
+        cursor: pointer;
+        font-size: 30px;
+        color: #ccc;
+    }
 
 .rate {
     unicode-bidi: bidi-override;
     direction: rtl;
 }
 
-.rate input {display: none;}
-.rate label:before {content:'★';}
+    .rate input {
+        display: none;
+    }
+
+    .rate label:before {
+        content: '★';
+    }
 
 
-.rate input:checked ~ label { color: gold; }
+    .rate input:checked ~ label {
+        color: gold;
+    }
 
 .stars:not(.inactive) .rate label:hover,
-.stars:not(.inactive) .rate label:hover ~ label { color: goldenrod !important;}
+.stars:not(.inactive) .rate label:hover ~ label {
+    color: goldenrod !important;
+}
 
 .rate1 {
-  border: 1px solid #cccccc;
-  height: 46px;
-  padding: 0 10px;
+    border: 1px solid #cccccc;
+    height: 46px;
+    padding: 0 10px;
+    vertical-align: middle;
 }
 
-.rate1 > label {
-  width: 1em;
-  overflow: hidden;
-  white-space: nowrap;
-  cursor: pointer;
-  font-size: 30px;
-  color: #ccc;
-}
 
 .rate1 {
     unicode-bidi: bidi-override;
     direction: rtl;
 }
 
-.rate1 input {display: none;}
-.rate1 label:before {content:'★';}
+    .rate1 input {
+        display: none;
+    }
+
+    .rate1 label:before {
+        content: '★';
+    }
 
 
-.rate1 input:checked ~ label { color: gold; }
+    .rate1 input:checked ~ label {
+        color: gold;
+    }
 
-
+.stars1:not(.inactive) .rate label:hover,
 .comment textarea {
     resize: vertical;
     font-size: 1.2em;
@@ -100,13 +135,15 @@ h3 {
     flex-direction: column;
     align-items: center;
 }
-.comment > * {
-    width: 100%;
-    max-width: 500px;
-}
-.comment .stars {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 1.5em;
-}
+
+    .comment > * {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .comment .stars {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        font-size: 1.5em;
+    }
