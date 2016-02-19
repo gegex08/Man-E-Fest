@@ -17,7 +17,7 @@ namespace GroupProjectFestivalApp.Services
         private UserRepository _userRepo;
         private CommentRepository _commentRepo;
 
-        public EventService(EventRepository eventRepo, AttractionRepository attractionRepo, UserRepository userRepo, CommentRepository commentRepo)
+         public EventService(EventRepository eventRepo, AttractionRepository attractionRepo, UserRepository userRepo, CommentRepository commentRepo)
         {
             _eventRepo = eventRepo;
             _attractionRepo = attractionRepo;
@@ -30,7 +30,6 @@ namespace GroupProjectFestivalApp.Services
             return (from e in _eventRepo.List()
                     select new EventDTO()
                     {
-
                         Id = e.Id,
                         StartTime = e.StartTime,
                         EndTime = e.EndTime,

@@ -1,14 +1,16 @@
 ﻿namespace GroupProjectFestivalApp.Controllers {
 
-    export class AttractionController {
+    export class InfoController {
 
-        public attractions;
+        public info;
 
         constructor(private $http: ng.IHttpService, private $routeParams) {
-            $http.get(`/api/attractions`)
+            $http.get(`/api/info/${$routeParams.id}`)
                 .then((response) => {
-                    this.attractions = response.data;
+                    this.info = response.data;
                 });
+
         }
+
     }
 }

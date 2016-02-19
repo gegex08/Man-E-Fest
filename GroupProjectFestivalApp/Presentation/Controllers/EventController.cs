@@ -26,6 +26,8 @@ namespace GroupProjectFestivalApp.Presentation.Controllers
             return _eventService.GetEvent();
         }
 
+       
+
         [HttpPost]
         [Authorize]
         [Route("api/events/{id}/rating")]
