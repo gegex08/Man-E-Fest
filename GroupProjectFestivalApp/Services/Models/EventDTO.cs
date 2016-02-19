@@ -15,7 +15,7 @@ namespace GroupProjectFestivalApp.Services.Models {
 
         public int AttendanceCount { get; set; }
 
-        public string Pushpin { get; set; }
+        public PushpinDTO Pushpin { get; set; }
 
         public AttractionDTO Attraction { get; set; }
 
@@ -28,5 +28,6 @@ namespace GroupProjectFestivalApp.Services.Models {
 
         public ApplicationUserDTO Users { get; set; }
 
+        public CommentDTO Comments { get; set; }
     }
 }
