@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace GroupProjectFestivalApp.Services.Models {
     public class ApplicationUserDTO {
 
-        public string User { get; set; }
+        public string UserName { get; set; }
 
         public string ProfilePictureUrl { get; set; }
 
