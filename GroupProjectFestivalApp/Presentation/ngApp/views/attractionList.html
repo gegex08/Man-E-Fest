@@ -1,9 +1,20 @@
-﻿<div>
-    <header>
-
-
-    </header>
-
+﻿
+<div>
     <h2>Attraction Listing</h2>
+    <nav>
+        <ul>
+            <li ng-init="order = 'name'" ng-click="order = 'name'">Attractions</li>
+            <li ng-click="order = 'startTime'">Attraction Times</li>
+            <li ng-click="order = 'rating'">Attraction Ratings</li>
+        </ul>
+    </nav>
+</div>
+<div class="row" ng-repeat="attraction in controller.attractions | orderBy:order">
+   
+    <div>
+       <img ng-src="{{attraction.pictureUrl}}" height="50" width="50"/>
+       {{attraction.name}}
+    </div>
+
 
 </div>

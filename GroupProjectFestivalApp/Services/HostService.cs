@@ -23,7 +23,7 @@ namespace GroupProjectFestivalApp.Services {
                         Events = f.Events,
                         Attractions = f.Attractions,
                         User = new ApplicationUserDTO() {
-                            User = f.User.UserName
+                            UserName = f.User.UserName
                         }
                     }).ToList();
         }

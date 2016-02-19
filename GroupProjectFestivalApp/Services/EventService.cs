@@ -25,12 +25,13 @@ namespace GroupProjectFestivalApp.Services {
 
             return (from e in _eventRepo.List()
                     select new EventDTO() {
-
                         Id = e.Id,
                         StartTime = e.StartTime,
                         EndTime = e.EndTime,
                         AttendanceCount = e.Users.Count(),
-                        Pushpin = e.Pushpin.Name,
+                        Pushpin = new PushpinDTO() {
+                            Name = e.Pushpin.Name,
+                        },
                         Attraction = new AttractionDTO() {
                             Name = e.Attraction.Name,
                             Description = e.Attraction.Description,
@@ -68,19 +69,18 @@ namespace GroupProjectFestivalApp.Services {
             _commentRepo.Add(comment);
             _commentRepo.SaveChanges();
 
-            return new EventDTO()
-            {
+            return new EventDTO() {
                 Rating = (int)eve.Rating,
-                Attraction = new AttractionDTO()
-                {
+                Attraction = new AttractionDTO() {
                     Rating = (int)eve.Attraction.Rating
                 }
             };
-            
 
-           
         }
-       
+
+
+
+
 
     }
 }

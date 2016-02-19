@@ -210,6 +210,7 @@
     <Compile Include="Domain\Pushpin.cs" />
     <Compile Include="Domain\Tag.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
+    <Compile Include="Infrastructure\InfoRepository.cs" />
     <Compile Include="Infrastructure\AttractionRepository.cs" />
     <Compile Include="Infrastructure\CommentRepository.cs" />
     <Compile Include="Infrastructure\EventRepository.cs" />
@@ -234,7 +235,9 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
+    <Compile Include="Presentation\Controllers\AttractionController.cs" />
     <Compile Include="Presentation\Controllers\CommentController.cs" />
+    <Compile Include="Presentation\Controllers\InfoController.cs" />
     <Compile Include="Presentation\Controllers\EventController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -261,6 +264,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Audio\foo.mp3" />
+    <Content Include="CarouselPics\bruno.jpg" />
+    <Content Include="CarouselPics\Foo_Fighters.jpg" />
+    <Content Include="CarouselPics\kendrick-lamar-009.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -279,6 +285,7 @@
     <Content Include="Images\foldedmapimageforhomepagelink.jpg" />
     <Content Include="Images\maplinkpictureforhomepage.png" />
     <Content Include="Presentation\ngApp\.gitignore" />
+    <Content Include="Presentation\ngApp\views\attractionInfo.html" />
     <Content Include="Presentation\ngApp\views\attractionList.html" />
     <Content Include="Presentation\ngApp\views\comment.html" />
     <Content Include="Presentation\ngApp\views\event.html" />
@@ -332,6 +339,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\attractionController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\attractionInfoController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\commentController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\eventController.ts" />

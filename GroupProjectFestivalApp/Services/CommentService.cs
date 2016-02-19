@@ -18,7 +18,6 @@ namespace GroupProjectFestivalApp.Services {
             _attractionRepo = attractionRepo;
 
         }
-
         public IList<CommentDTO> GetComment() {
 
             return (from c in _commentRepo.List()
@@ -28,7 +27,9 @@ namespace GroupProjectFestivalApp.Services {
                         Message = c.Message,
                         Event = new EventDTO() {
                             Id = c.Event.Id,
-                            Pushpin = c.Event.Pushpin.Name,
+                            Pushpin = new PushpinDTO() {
+                                Name = c.Event.Pushpin.Name,
+                            },
                             Attraction = new AttractionDTO() {
                                 Name = c.Event.Attraction.Name,
                             },
@@ -37,9 +38,12 @@ namespace GroupProjectFestivalApp.Services {
                             Rating = (int)c.Event.Rating
                         },
                         User = new ApplicationUserDTO() {
-                            User = c.User.UserName
+                            UserName = c.User.UserName
                         }
                     }).ToList();
         }
+        
+
+
     }
 }

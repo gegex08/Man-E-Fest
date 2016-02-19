@@ -15,5 +15,7 @@ namespace GroupProjectFestivalApp.Services.Models {
         public string PictureUrl { get; set; }
 
         public string SoundUrl { get; set; }
+
+        public EventDTO Event { get; set; }
     }
 }

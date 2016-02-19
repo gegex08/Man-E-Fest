@@ -54,6 +54,9 @@
                 controller: GroupProjectFestivalApp.Controllers.AttractionController,
                 controllerAs: 'controller'
             });
+            $routeProvider.when('/info/:id', {
+                templateUrl: '/Presentation/ngApp/views/attractionInfo.html',
+                controller: GroupProjectFestivalApp.Controllers.InfoController,
             $routeProvider.when('/comments', {
                 templateUrl: '/Presentation/ngApp/views/comment.html',
                 controller: GroupProjectFestivalApp.Controllers.CommentController,
