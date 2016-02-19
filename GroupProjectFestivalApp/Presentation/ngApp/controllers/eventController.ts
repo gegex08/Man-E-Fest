@@ -3,6 +3,7 @@
     export class EventController {
 
         public events;
+        public comments;
 
         constructor(private $http: ng.IHttpService, private $routeParams) {
             $http.get(`/api/events`)
@@ -11,18 +12,24 @@
                 });
         }
 
-        public addComment(eventid, comment): void {
+        public addComment(event, comment): void {
             if (comment) {
-                this.$http.post(`/api/addComment`, {
-                    eventId: this.events.message,
-                    comment: comment
-                })
+                this.$http.post(`api/events/${event.id}`, comment)
+
                     .then((response) => {
-                        this.events.apply(response.data);
+                        let eventDto: any = response.data; // eventdto
+                        event.rating = eventDto.rating;
+                        event.attraction.rating = eventDto.attraction.rating;
+
+                        alert('Thank you for your feedback!');
                     })
                     .catch((response) => {
-                    }); 
+                        alert('There was an error. Sorry :(');
+                    });
             }
         }
+
+
+
     }
 }

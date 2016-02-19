@@ -8,35 +8,29 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace GroupProjectFestivalApp.Services
-{
-    public class EventService
-    {
+namespace GroupProjectFestivalApp.Services {
+    public class EventService {
         private EventRepository _eventRepo;
         private AttractionRepository _attractionRepo;
         private UserRepository _userRepo;
         private CommentRepository _commentRepo;
 
-         public EventService(EventRepository eventRepo, AttractionRepository attractionRepo, UserRepository userRepo, CommentRepository commentRepo)
-        {
+        public EventService(EventRepository eventRepo, AttractionRepository attractionRepo, UserRepository userRepo, CommentRepository commentRepo) {
             _eventRepo = eventRepo;
             _attractionRepo = attractionRepo;
             _userRepo = userRepo;
             _commentRepo = commentRepo;
         }
-        public IList<EventDTO> GetEvent()
-        {
+        public IList<EventDTO> GetEvent() {
 
             return (from e in _eventRepo.List()
-                    select new EventDTO()
-                    {
+                    select new EventDTO() {
                         Id = e.Id,
                         StartTime = e.StartTime,
                         EndTime = e.EndTime,
                         AttendanceCount = e.Users.Count(),
                         Pushpin = e.Pushpin.Name,
-                        Attraction = new AttractionDTO()
-                        {
+                        Attraction = new AttractionDTO() {
                             Name = e.Attraction.Name,
                             Description = e.Attraction.Description,
                             Rating = (int)e.Attraction.Rating,
@@ -46,15 +40,15 @@ namespace GroupProjectFestivalApp.Services
                         Tags = (from t in e.Tags
                                 select t.Name).ToList(),
                         Host = e.Host.Name,
-                        Rating = (int)e.Rating
+                        Rating = (int)e.Rating,
                     }).ToList();
         }
-        public CommentDTO AddComment(int eventId, string userName, CommentBindingModel newComment)
-        {
+        public EventDTO AddComment(int eventId, string userName, CommentBindingModel newComment) {
             var eve = _eventRepo.Get(eventId)
                 .Include(e => e.Attraction.Events)
                 .Include(e => e.Comments)
                 .FirstOrDefault();
+
             var user = _userRepo.FindByUsername(userName).FirstOrDefault();
 
             var oldRating = eve.Rating;
@@ -65,8 +59,7 @@ namespace GroupProjectFestivalApp.Services
 
             eve.Attraction.Rating = (eve.Attraction.Rating * numEvents - oldRating + eve.Rating) / numEvents;
 
-            var comment = new Comment()
-            {
+            var comment = new Comment() {
                 Message = newComment.Message,
                 Event = eve,
                 User = user
@@ -74,12 +67,19 @@ namespace GroupProjectFestivalApp.Services
             _commentRepo.Add(comment);
             _commentRepo.SaveChanges();
 
-            return new CommentDTO()
+            return new EventDTO()
             {
-                Message = newComment.Message,
-                Event = eve,
-               
+                Rating = (int)eve.Rating,
+                Attraction = new AttractionDTO()
+                {
+                    Rating = (int)eve.Attraction.Rating
+                }
             };
+            
+
+           
         }
+       
+
     }
 }

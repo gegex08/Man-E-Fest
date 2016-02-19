@@ -1,24 +1,59 @@
-﻿
-<div ng-repeat="host in controller.hosts">
-    <div>
+﻿<header>
 
-        <div>
-            <div class="col-md-2"> {{host.user}}</div>
+    <div ng-show="event in controller.event">
+        <div class="col-md-4 text-left">
+            <div class="boxtext">
+                <h5>
+                    Hello, {{event.user}}!
+                    <img src="http://bonniesomerville.nz/wp-content/uploads/2015/08/profile-icon.png"
+                         height="25"
+                         width="25" />
+                </h5>
+            </div>
+        </div>
+    </div>
+    <div ng-show="host in controller.hosts">
+        <div class="col-md-4 text-center" >
+            <div class="boxtext">
+                <h5>
+                    Brought to you by {{host.name}}!
+                </h5>
+                </div>
+            </div>
+    </div>
+    <div class="row text-right">
+        <img src="https://consequenceofsound.files.wordpress.com/2014/10/sxsw-2015.png"
+             height="100"
+             width="100" />
+        <img src="http://www.aclfestival.com/wp/wp-content/uploads/2014/07/ACL_Logo-VERTICAL.png"
+             height="100"
+             width="100" />
+    </div>
+</header>
+<hr />
 
-            <div class="col-md-4"> <h1>{{host.name}}</h1> </div>
+<div class="col-md-2"> {{host.user}}</div>
+<div class="col-md-2"> {{host.user}}</div>
+<br />
+
+<div class="col-md-4"><h1>{{host.name}}</h1> </div>
 
             <div class="col-md-6"></div>
-        </div>
-        <div class="row">
-            <div class="col-md-8">
-                <h4>List of Attractions</h4>
-                <a href="http://www.sxsw.com/"> <img src="http://thepoliticalcarnival.net/wp-content/uploads/2012/06/coming-attractions.jpg"> </a>
+<div class="col-md-6"></div>
+<div class="row">
+    <div class="col-md-8">
+        <div class="boxtext">
+            <h4>List of Attractions</h4>
             </div>
-            <div class="col-md-4">
+            <a href="http://www.sxsw.com/"> <img src="http://thepoliticalcarnival.net/wp-content/uploads/2012/06/coming-attractions.jpg"> </a>
+        </div>
+    <div class="col-md-4">
+        <div class="boxtext">
                 <h4>Event Categories & Reviews</h4>
+            </div>
                 <a href="https://www.cesweb.org/"> <img src="http://cdn2.business2community.com/wp-content/uploads/2015/11/Online-reviews.jpg" style="width: 350px; height: 230px;"> </a>
             </div>
-        </div>
+</div>
         <div class="col-md-12">
             <div id="myCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -52,10 +87,13 @@
                 </a>
             </div>
         </div>
-        <div>
-            <footer>
-                <h2 class="text-center"> <a id="1" ng-href="http://www.sxsw.com/">{{host.url}}</a></h2>
-            </footer>
+<div>
+    <a href="map url goes here"><img src="../../../Images/maplinkpictureforhomepage.png" alt="Map" width="100" height="100" /></a>
+</div>
+<div>
+    <footer>
+        <h2 class="text-center"> <a id="1" ng-href="http://www.sxsw.com/">{{host.url}}</a></h2>
+    </footer>
         </div>
     </div>
 </div>

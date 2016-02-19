@@ -17,7 +17,7 @@
                     if (response.status === 401) {
                         $location.path('/login');
                     }
-                    return $q.reject(response);
+                    return response || $q.when(response);
                 }
             };
         });
@@ -57,6 +57,9 @@
             $routeProvider.when('/info/:id', {
                 templateUrl: '/Presentation/ngApp/views/attractionInfo.html',
                 controller: GroupProjectFestivalApp.Controllers.InfoController,
+            $routeProvider.when('/comments', {
+                templateUrl: '/Presentation/ngApp/views/comment.html',
+                controller: GroupProjectFestivalApp.Controllers.CommentController,
                 controllerAs: 'controller'
             });
         });

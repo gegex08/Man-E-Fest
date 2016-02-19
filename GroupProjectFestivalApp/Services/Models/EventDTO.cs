@@ -23,6 +23,10 @@ namespace GroupProjectFestivalApp.Services.Models {
 
         public string Host { get; set; }
 
+        [Required]
         public int Rating { get; set; }
+
+        public ApplicationUserDTO Users { get; set; }
+
     }
 }
