@@ -1,17 +1,42 @@
-﻿<div>
+﻿<div class="boxtext">
     <div class="row">
-      Attraction:  <div>{{controller.info.name}}</div>
-        <div><img src="{{controller.info.pictureUrl}}" /></div>
-      Attraction Bio:  <div>{{controller.info.description}}</div>
-       Avg. Fan Rating:  <div>{{controller.info.rating}}</div>
+        <div>
+            <h3>Attraction:  {{controller.info.name}}</h3>
+        </div>
+        <div><h4> Start Times: {{controller.info.events[0].startTime | date:"short"}}</h4></div>
+        <div><h4> End Times: {{controller.info.events[0].endTime | date:"short"}}</h4></div>
     </div>
-
+    <div><img src="{{controller.info.pictureUrl}}" /></div>
+    <div><h2>Attraction Bio:  {{controller.info.description}}</h2></div>
+    <div>
+        <h2>
+            Average Fan Rating:
+            <span class="rate1">
+                <input disabled type="radio" ng-model="controller.info.rating" value="5" />
+                <label for="rating5"></label>
+                <input disabled type="radio" ng-model="controller.info.rating" value="4" />
+                <label for="rating4"></label>
+                <input disabled type="radio" ng-model="controller.info.rating" value="3" />
+                <label for="rating3"></label>
+                <input disabled type="radio" ng-model="controller.info.rating" value="2" />
+                <label for="rating2"></label>
+                <input disabled type="radio" ng-model="controller.info.rating" value="1" />
+                <label for="rating1"></label>
+            </span>
+        </h2>
+    </div>
 </div>
 
-    <div>
-        <h2>Find Us On:</h2>
-        <div> Facebook: <img src="http://ayunhalliday.com/wp-content/uploads/2015/09/Facebook-logo-png-2.png" height="60" width="75"></div>
-        <div>Twitter:  <img src="http://www.lexproducts.com/content/upload_general/twitter-logo-2.png" height="60" width="60" /></div>
-        <div> InstaGram: <img src="http://www.deonvsearth.com/wp-content/uploads/2015/02/instagram-logo-1024x1024.png" height="60" width="60"> </div>
+
+
+<div style="display: block; margin: 0px auto; text-align: left;">
+    <div class="boxtext">        
+        <h4>
+            Find Us On:
+            <a href="www.facebook.com"> Facebook: <img src="http://ayunhalliday.com/wp-content/uploads/2015/09/Facebook-logo-png-2.png" height="60" width="75"></a>
+            <a href="www.twitter.com">Twitter: <img src="http://www.lexproducts.com/content/upload_general/twitter-logo-2.png" height="60" width="60" /></a>
+            <a href="www.instagram.com"> InstaGram: <img src="http://www.deonvsearth.com/wp-content/uploads/2015/02/instagram-logo-1024x1024.png" height="60" width="60"></a>
+        </h4>     
     </div>
+</div>
 
