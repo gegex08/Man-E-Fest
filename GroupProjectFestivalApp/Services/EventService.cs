@@ -21,11 +21,12 @@ namespace GroupProjectFestivalApp.Services {
             _userRepo = userRepo;
             _commentRepo = commentRepo;
         }
-        public IList<EventDTO> GetEvent() {
+        public IList<EventDTO> GetEvent(int id) {
 
             return (from e in _eventRepo.List()
+                    where e.Id == id
                     select new EventDTO() {
-                        Id = e.Id,
+                      
                         StartTime = e.StartTime,
                         EndTime = e.EndTime,
                         AttendanceCount = e.Users.Count(),

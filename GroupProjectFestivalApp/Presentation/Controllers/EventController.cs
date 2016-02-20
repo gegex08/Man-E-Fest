@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
+using System.Net.Http;  
 using System.Web.Http;
 
 namespace GroupProjectFestivalApp.Presentation.Controllers {
@@ -18,9 +18,9 @@ namespace GroupProjectFestivalApp.Presentation.Controllers {
 
 
         [HttpGet]
-        [Route("api/events")]
-        public IList<EventDTO> Get() {
-            return _eventService.GetEvent();
+        [Route("api/events/{id}")]
+        public IList<EventDTO> Get(int id) {
+            return _eventService.GetEvent(id);
         }
 
        

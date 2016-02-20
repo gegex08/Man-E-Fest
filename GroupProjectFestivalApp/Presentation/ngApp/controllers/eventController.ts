@@ -6,7 +6,7 @@
         public comments;
 
         constructor(private $http: ng.IHttpService, private $routeParams) {
-            $http.get(`/api/events`)
+            $http.get(`/api/events/${$routeParams.id}`)
                 .then((response) => {
                     this.events = response.data;
                 });

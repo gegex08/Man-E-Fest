@@ -6,6 +6,8 @@ using System.Web;
 namespace GroupProjectFestivalApp.Services.Models {
     public class AttractionDTO {
 
+        public int Id { get; set; }
+
         public string Name { get; set; }
 
         public string Description { get; set; }
