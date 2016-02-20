@@ -9,6 +9,7 @@
             this.$http.post('/api/account/register', user)
                 .then((response) => {
                     console.log('Registered a new user!');
+                    this.$location.path('/login');
                 })
                 .catch((response) => {
                     console.log(response);

@@ -16,6 +16,6 @@ namespace GroupProjectFestivalApp.Services.Models {
 
         public string SoundUrl { get; set; }
 
-        public EventDTO Event { get; set; }
+        public IList<EventDTO> Events { get; set; }
     }
 }
