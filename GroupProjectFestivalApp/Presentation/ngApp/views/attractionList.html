@@ -12,7 +12,8 @@
 <div class="row" ng-repeat="attraction in controller.attractions | orderBy:order">
    
     <div>
-       <img ng-src="{{attraction.pictureUrl}}" height="50" width="50"/>
+     
+       <a href="#/info/{{attraction.id}}">  <img ng-src="{{attraction.pictureUrl}}" height="175" width="175"></a>
        {{attraction.name}}
     </div>
 
