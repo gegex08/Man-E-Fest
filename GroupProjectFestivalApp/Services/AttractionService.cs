@@ -48,9 +48,8 @@ namespace GroupProjectFestivalApp.Services
         {
 
             return (from a in _attractionRepo.List()
-                    select new AttractionDTO()
+                    select new AttractionDTO() {
                         Id = a.Id,
-                    {
                         PictureUrl = a.PictureUrl,
                         Name = a.Name,
                         Description = a.Description,
