@@ -283,6 +283,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Images\festivalgirl.jpg" />
     <Content Include="Images\foldedmapimageforhomepagelink.jpg" />
     <Content Include="Images\GennyFestMap.png" />
     <Content Include="Images\maplinkpictureforhomepage.png" />
