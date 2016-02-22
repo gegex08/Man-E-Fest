@@ -65,5 +65,6 @@
                 controllerAs: 'controller'
             });
         });
+
 }
 
