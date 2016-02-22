@@ -1,102 +1,78 @@
-﻿<header>
-
-    <div ng-show="event in controller.event">
-        <div class="col-md-4 text-left">
-            <div class="boxtext">
-                <h5>
-                    Hello, {{event.user}}!
-                    <img src="http://bonniesomerville.nz/wp-content/uploads/2015/08/profile-icon.png"
-                         height="25"
-                         width="25" />
-                </h5>
-            </div>
+﻿<div class="site-top">
+    <div id="wrap">
+        <div id="header">
+            <div class="one"></div>
+            <div class="two"></div>
+            <div class="three"></div>
+            <div class="four"></div>
+            <div class="five"></div>
+            <div class="six"></div>
         </div>
     </div>
-    <div ng-show="host in controller.hosts">
-        <div class="col-md-4 text-center">
-            <div class="boxtext">
-                <h5>
-                    Brought to you by {{host.name}}!
-                </h5>
-            </div>
+</div>
+
+
+<div ng-show="event in controller.event">
+    <div>
+        <h1>Man-E-Fest</h1>
+    </div>
+    <div class="col-md-4 text-left">
+        <div class="boxtext">
+            <h5>
+                Hello, {{event.user}}!
+                <img src="http://bonniesomerville.nz/wp-content/uploads/2015/08/profile-icon.png"
+                     height="25"
+                     width="25" />
+            </h5>
         </div>
     </div>
-    <div class="row text-right">
-        <img src="https://consequenceofsound.files.wordpress.com/2014/10/sxsw-2015.png"
-             height="100"
-             width="100" />
-        <img src="http://www.aclfestival.com/wp/wp-content/uploads/2014/07/ACL_Logo-VERTICAL.png"
-             height="100"
-             width="100" />
+</div>
+<div ng-show="host in controller.hosts">
+    <div class="col-md-4">
+        <div class="boxtext">
+            <h5>
+                Brought to you by {{host.name}}!
+            </h5>
+        </div>
     </div>
-</header>
-<hr />
+</div>
+<div class="row text-right">
+    <img src="https://consequenceofsound.files.wordpress.com/2014/10/sxsw-2015.png"
+         height="100"
+         width="100" />
+    <img src="http://www.aclfestival.com/wp/wp-content/uploads/2014/07/ACL_Logo-VERTICAL.png"
+         height="100"
+         width="100" />
+</div>
 
-<div class="col-md-2"> {{host.user}}</div>
-<div class="col-md-2"> {{host.user}}</div>
-<br />
 
-<div class="col-md-4"><h1>{{host.name}}</h1> </div>
 
-<div class="col-md-6"></div>
-<div class="col-md-6"></div>
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-4">
         <div class="boxtext">
             <h4>List of Attractions</h4>
         </div>
-        <a href="http://www.sxsw.com/"> <img src="http://thepoliticalcarnival.net/wp-content/uploads/2012/06/coming-attractions.jpg"> </a>
+        <a href="http://localhost:63194/#/attractions"> <img src="http://thepoliticalcarnival.net/wp-content/uploads/2012/06/coming-attractions.jpg"> </a>
     </div>
     <div class="col-md-4">
+        <h4>Map</h4>
+        <a href="http://localhost:63194/#/map"><img src="https://cdn0.iconfinder.com/data/icons/map-locations-and-tourism/512/52-256.png" alt="Map" style="width:300px; height:230px;" /></a>
+    </div>
+
+
+
+    <div class="col-md-4">
         <div class="boxtext">
-            <h4>Event Categories & Reviews</h4>
+            <h4>Purchase Tickets</h4>
         </div>
-        <a href="https://www.cesweb.org/"> <img src="http://cdn2.business2community.com/wp-content/uploads/2015/11/Online-reviews.jpg" style="width: 350px; height: 230px;"> </a>
+        <a href="http://www.ticketmaster.com"> <img src="http://vectortoons.com/wp-content/uploads/2013/08/ticket-collection-005.jpg" style="width: 350px; height: 230px;"> </a>
+         
     </div>
 </div>
+    
 
 
 
-<div id="myCarousel" class="carousel slide">
-    <!-- Indicators -->
-   <ol class="carousel-indicators">
-        <li data-target="myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="myCarousel" data-slide-to="1"></li>
-        <li data-target="myCarousel" data-slide-to="2"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-   <div id="carousel-inner">
-        <div class="item active">
-           
-            <img src="../../../CarouselPics/bruno.jpg" class="img-responsive" >
-        </div>
-
-        <div class="item">
-            <img src="../../../CarouselPics/Foo_Fighters.jpg" class="img-responsive" >
-        </div>
-
-        <div class="item">
-
-            <img src="../../../CarouselPics/kendrick-lamar-009.jpg" class="img-responsive" >
-        </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <span class="left carousel-control" data-target="#myCarousel"  data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-     
-    </span>
-    <span class="right carousel-control" data-target="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-       
-    </span>
-</div>
-
-
-<div>
-    <a href="map url goes here"><img src="../../../Images/maplinkpictureforhomepage.png" alt="Map" width="100" height="100" /></a>
-</div>
 <div>
     <footer>
         <h2 class="text-center"> <a id="1" ng-href="http://www.sxsw.com/">{{host.url}}</a></h2>

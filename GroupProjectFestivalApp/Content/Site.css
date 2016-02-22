@@ -1,18 +1,88 @@
 ﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-    background-color: #00518b;
-    background-image: url("https://consequenceofsound.files.wordpress.com/2014/10/sxsw-2015.png?w=807");
-    background-repeat: no-repeat;
-    background-size: cover;
+
     font-family: "Rockwell";
     color: #3bc57f;
 }
+#wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 205px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
 
+#header {
+  position:relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  animation: move 20s infinite linear;
+}
+
+@keyframes move {
+  from {
+    left: 0;
+  }
+  to {
+    left: -2450px;
+  }
+}
+
+#header > div {
+  width: 600px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  border-right: 2px solid black;
+  background-position: center;
+  background-size: 600px auto;
+  display: block;
+  position: absolute;
+  border-bottom: 5px solid black;
+}
+
+#header > div.one {
+ background:  url(http://www.onyxtruth.com/wp-content/uploads/2016/02/Black-Voices-Onyx-Truth.jpg);
+  margin-left: 0;
+}
+
+#header > div.two {
+ background:  url(http://static.wixstatic.com/media/8a013a_85d9ceb867834606a1b354db75d5099c.png_srz_409_272_75_22_0.50_1.20_0.00_png_srz);
+  margin-left: 602px;
+}
+
+#header > div.three {
+ background:  url(http://farm9.staticflickr.com/8252/8649235715_6d5d521594_z.jpg);
+  margin-left: 1204px;
+}
+
+#header > div.four {
+ background:  url(http://www.uh.edu/magazine/2015-fall/_img/photo-blazing-the-trail.jpg);
+  margin-left: 1806px;
+}
+
+#header > div.five {
+ background:  url(http://s1.favim.com/orig/5/audience-black-and-white-festival-live-music-Favim.com-158998.jpg);
+  margin-left: 2408px;
+}
+
+#header > div.six {
+ background:  url(http://assets.rollingstone.com/assets/2014/article/the-killers-tim-mcgraw-and-ll-cool-j-pump-up-ncaa-march-madness-fest-20140406/14948/_original/1035x690-killers-1800-1396794435.jpg);
+  margin-left: 3010px;
+}
 h1 {
-    color: white;
-    font-family: "Rockwell";
-    font-size: 300%;
+    font-size: 800%;
+    color: black;
+    margin-top:200px;
+    font-family: Rockwell
+}
+
 }
 
 h2 {
@@ -31,6 +101,8 @@ h4 {
     color: #3bc57f;
     font-family: "Rockwell";
     font-size: 180%;
+    align-content:center;
+
 }
 
 
@@ -52,12 +124,13 @@ textarea {
 }
 
 .boxtext {
-    background-color: rgba(46,44,41,.8);
-    border: 6px groove #a2a2a2;
-    border-radius: 10px;
-    padding: 10px 15px;
-    flex-direction: row;
-    text-align: center;
+    background-color: teal;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-content: center;
+    display: inline;
+    align-content:center;
 }
 
 .rate {
@@ -67,7 +140,6 @@ textarea {
 }
 
     .rate > label {
-
         width: 1em;
         overflow: hidden;
         white-space: nowrap;
@@ -148,6 +220,13 @@ textarea {
         align-items: center;
         font-size: 1.5em;
     }
-
-
-
+.dimmer {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+    background-color: #7142a7;
+}

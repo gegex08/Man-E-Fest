@@ -20,8 +20,8 @@ namespace GroupProjectFestivalApp {
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css",
-                   "~/Content/ui-bootstrap-csp.css"
-                      ));
+                      "~/Content/map.css"));
+            
 
             bundles.Add(new ScriptBundle("~/angular/core").Include(
                       "~/Scripts/angular.js",
