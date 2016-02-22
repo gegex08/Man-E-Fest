@@ -64,6 +64,12 @@
                 controller: GroupProjectFestivalApp.Controllers.CommentController,
                 controllerAs: 'controller'
             });
+            $routeProvider.when('/map', {
+                templateUrl: '/Presentation/ngApp/views/map.html',
+                controller: GroupProjectFestivalApp.Controllers.MapController,
+                controllerAs:'controller'
+                
+            });
         });
-}
 
+}

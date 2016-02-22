@@ -1,5 +1,6 @@
-﻿<form class="vertical-center" ng-submit="controller.register(user)">
-    <h1 style="color:skyblue">Fill out the below to create a new account</h1>
+﻿<div class="col-md-offset-3 col-md-5">
+<form class="vertical-center" ng-submit="controller.register(user)">
+    <h1 style="color:skyblue">Create New Account</h1>
     <input ng-model="user.userName" placeholder="User Name" class="form-control" />
     <input ng-model="user.email" placeholder="Email" class="form-control" />
     <input ng-model="user.password" placeholder="Password" type="password" class="form-control" />
@@ -7,3 +8,4 @@
     <input type="submit" class="form-control btn btn-success" value="Register" />
     <p>Or <a href="#/login">Log in here</a> for an existing account</p>
 </form>
+</div>
