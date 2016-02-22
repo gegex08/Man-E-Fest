@@ -1,62 +1,60 @@
 ﻿<h3 class="text-center">Attraction Listing</h3>
- 
-<nav>
-    <div class="col-md-4 text-left">
-        <div class="boxtext">
+ <div class="row">
+    <nav>
+        <div class="boxtext col-md-4 text-left">
             <h4 ng-init="order = 'name'" ng-click="order = 'name'">Attractions</h4>
         </div>
-    </div>
-    <div class="col-md-4 text-center">
-        <div col-offset-1 col-md-4 class="boxtext">
+
+
+        <div col-offset-1 col-md-4 class="boxtext col-md-4 text-center">
             <h4 ng-click="order = 'startTime'">Attraction Times</h4>
         </div>
-    </div>
-    <div class="col-md-4 text-right">
-        <div col-offset-1 col-md-4 class="boxtext">
+
+
+        <div col-offset-1 col-md-4 class="boxtext col-md-4 text-right">
             <h4 ng-click="order = 'rating'">Attraction Ratings</h4>
         </div>
-    </div>
+    </nav>
+</div>
+<br />
 
-</nav>
 
+    <div class="row" ng-repeat="attraction in controller.attractions | orderBy:order">
 
-<div class="row" ng-repeat="attraction in controller.attractions | orderBy:order">
-
-    <div class="boxtext">
-     
-       <a href="#/info/{{attraction.id}}">  <img ng-src="{{attraction.pictureUrl}}" height="175" width="175"></a>
-        <h3>
-            <span style="display: block; margin: 0px auto; text-align: left;">
-                {{attraction.name}}
-            </span>
-        </h3>
-        <h4>
-            <span style="display: block; margin: 0px auto; text-align: center;">
-
-                RATINGS
-
-                <span class="rate1">
-                    <input disabled type="radio" ng-model="attraction.rating" value="5" />
-                    <label for="rating5"></label>
-                    <input disabled type="radio" ng-model="attraction.rating" value="4" />
-                    <label for="rating4"></label>
-                    <input disabled type="radio" ng-model="attraction.rating" value="3" />
-                    <label for="rating3"></label>
-                    <input disabled type="radio" ng-model="attraction.rating" value="2" />
-                    <label for="rating2"></label>
-                    <input disabled type="radio" ng-model="attraction.rating" value="1" />
-                    <label for="rating1"></label>
+        <div class="boxtext">
+            <h3>
+                <span style="display: block; margin: 0px auto; text-align: left;">
+                    {{attraction.name}}
                 </span>
-            </span>
-        </h4>
+            </h3>
 
-        <h2>
-            <span style="display: block; margin: 0px auto; text-align: right;">
-                TIMES
-                {{attraction.events[0].startTime | date:"short"}}
-            </span>
-        </h2>
-    </div>
+            <a href="#/info/{{attraction.id}}">  <img ng-src="{{attraction.pictureUrl}}" height="175" width="175"></a>
+                           
+                    <h4>
+                        <span style="display: block; margin: 0px auto; text-align: center;">
 
+                            RATINGS
 
+                            <span class="rate1">
+                                <input disabled type="radio" ng-model="attraction.rating" value="5" />
+                                <label for="rating5"></label>
+                                <input disabled type="radio" ng-model="attraction.rating" value="4" />
+                                <label for="rating4"></label>
+                                <input disabled type="radio" ng-model="attraction.rating" value="3" />
+                                <label for="rating3"></label>
+                                <input disabled type="radio" ng-model="attraction.rating" value="2" />
+                                <label for="rating2"></label>
+                                <input disabled type="radio" ng-model="attraction.rating" value="1" />
+                                <label for="rating1"></label>
+                            </span>
+                        </span>
+                    </h4>
+
+                    <h2>
+                        <span style="display: block; margin: 0px auto; text-align: right;">
+                            TIMES
+                            {{attraction.events[0].startTime | date:"short"}}
+                        </span>
+                    </h2>
+        </div> 
 </div>
