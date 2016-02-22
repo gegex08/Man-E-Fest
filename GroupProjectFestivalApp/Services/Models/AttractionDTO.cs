@@ -6,6 +6,8 @@ using System.Web;
 namespace GroupProjectFestivalApp.Services.Models {
     public class AttractionDTO {
 
+        public int Id { get; set; }
+
         public string Name { get; set; }
 
         public string Description { get; set; }
@@ -16,6 +18,6 @@ namespace GroupProjectFestivalApp.Services.Models {
 
         public string SoundUrl { get; set; }
 
-        public EventDTO Event { get; set; }
+        public IList<EventDTO> Events { get; set; }
     }
 }

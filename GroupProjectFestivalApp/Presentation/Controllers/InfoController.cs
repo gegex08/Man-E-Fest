@@ -12,17 +12,21 @@ namespace GroupProjectFestivalApp.Presentation.Controllers
     public class InfoController : ApiController
     {
         private AttractionService _attractionService;
+        private EventService _eventService;
 
-        public InfoController(AttractionService attractionService) {
+        public InfoController(AttractionService attractionService, EventService eventService)
+        {
 
             _attractionService = attractionService;
+            _eventService = eventService;
         }
         [HttpGet]
         [Route("api/info/{id}")]
-        public AttractionDTO GetAttraction(int id) {
+        public AttractionDTO GetAttraction(int id)
+        {
 
             return _attractionService.GetAttraction(id);
-        }
+        }       
     }
 }
- 
+

@@ -1,11 +1,11 @@
-﻿<div class="row" ng-repeat="event in controller.events">
+﻿<div class="row" ng-repeat="event in controller.events" >
     <div class="col-md-12">
         <div class="boxtext">
             <h3><strong> Today's attraction is {{event.attraction.name}} !</strong></h3>
             <form class="comment row">
                 <div class="stars1 {{starsDisabled?'inactive':''}}">
                     <h4>
-                        Average Rating:
+                        Average Fan Rating:
                         <span class="rate1">
                             <inpup disabled type="radio" ng-model="event.rating" value="5" />
                             <label for="rating5"></label>
@@ -27,49 +27,52 @@
                 Until :  {{event.endTime  | date:"short"}}
             </h2>
             <span style="display: block; margin: 0px auto; text-align: left;">
-                PIN: {{event.pins}}
+                PIN: {{event.pushpins}}
             </span>
         </div>
         <div class="boxtext">
             <span style="display: block; margin: 0px auto; text-align: left;">
-                Latest Comments: {{event.tags}}
+                Latest Comments: {{event.tags[0]}} {{event.comments}}
             </span>
         </div>
 
     </div>
     <br />
+    <div class="row">
+        <div class="col-lg-offset-2 col-md-3">
+            <img ng-src="{{event.attraction.pictureUrl}}" height="500" width="800" />
+            <div class="col-md-offset-12 col-md-12">
+                <audio controls autoplay>
+                    <source ng-src="{{event.attraction.soundUrl}}" type="audio/mp3">
+                    Your browser does not support the audio element.
+                </audio>
+                <br />
 
-    <div class="col-lg-offset-2 col-md-3">
-        <img ng-src="{{event.attraction.pictureUrl}}" height="500" width="800" />
-        <div class="col-md-offset-12 col-md-12">
-            <audio controls autoplay>
-                <source ng-src="{{event.attraction.soundUrl}}" type="audio/mp3">
-                Your browser does not support the audio element.
-            </audio>
-            <br />
-
+            </div>
         </div>
     </div>
-</div>
 
-<div class="boxtext">
-    <form class="comment row" ng-submit="controller.addComment(event, comment)">
-        <div class="stars {{starsDisabled?'inactive':''}}" ng-init="starsDisabled = false;">
-            <h4>Your Rating:</h4>
-            <span class="rate">
-                <input enabled type="radio" ng-model="comment.rating" value="5" id="rating5" ng-disabled="starsDisabled" />
-                <label for="rating5"></label>
-                <input enabled type="radio" ng-model="comment.rating" value="4" id="rating4" ng-disabled="starsDisabled" />
-                <label for="rating4"></label>
-                <input enabled type="radio" ng-model="comment.rating" value="3" id="rating3" ng-disabled="starsDisabled" />
-                <label for="rating3"></label>
-                <input enabled type="radio" ng-model="comment.rating" value="2" id="rating2" ng-disabled="starsDisabled" />
-                <label for="rating2"></label>
-                <input enabled type="radio" ng-model="comment.rating" value="1" id="rating1" ng-disabled="starsDisabled" />
-                <label for="rating1"></label>
-            </span>
+    <div class="row">
+        <div class="boxtext">
+            <form class="comment row" ng-submit="controller.addComment(event, comment)">
+                <div class="stars {{starsDisabled?'inactive':''}}" ng-init="starsDisabled = false;">
+                    <h4>Your Rating:</h4>
+                    <span class="rate">
+                        <input enabled type="radio" ng-model="comment.rating" value="5" id="rating5" ng-disabled="starsDisabled" />
+                        <label for="rating5"></label>
+                        <input enabled type="radio" ng-model="comment.rating" value="4" id="rating4" ng-disabled="starsDisabled" />
+                        <label for="rating4"></label>
+                        <input enabled type="radio" ng-model="comment.rating" value="3" id="rating3" ng-disabled="starsDisabled" />
+                        <label for="rating3"></label>
+                        <input enabled type="radio" ng-model="comment.rating" value="2" id="rating2" ng-disabled="starsDisabled" />
+                        <label for="rating2"></label>
+                        <input enabled type="radio" ng-model="comment.rating" value="1" id="rating1" ng-disabled="starsDisabled" />
+                        <label for="rating1"></label>
+                    </span>
+                </div>
+                <textarea rows="5" placeholder="Enter Comments" class="form-control" ng-model="comment.message"></textarea>
+                <input class="btn btn-success" type="submit" value="Submit" />
+            </form>
         </div>
-        <textarea rows="5" placeholder="Enter Comments" class="form-control" ng-model="comment.message"></textarea>
-        <input class="btn btn-success" type="submit" value="Submit" />
-    </form>
+    </div>
 </div>
