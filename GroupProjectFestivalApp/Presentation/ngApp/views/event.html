@@ -1,4 +1,4 @@
-﻿<div class="row" ng-repeat="event in controller.events" >
+﻿<div class="row" ng-repeat="event in controller.events">
     <div class="col-md-12">
         <div class="boxtext">
             <h3><strong> Today's attraction is {{event.attraction.name}} !</strong></h3>
@@ -21,22 +21,24 @@
                     </h4>
                 </div>
             </form>
+            
 
-            <h2>
-                Starting at : {{event.startTime | date:"short"}}<br />
-                Until :  {{event.endTime  | date:"short"}}
-            </h2>
-            <span style="display: block; margin: 0px auto; text-align: left;">
-                PIN: {{event.pushpins}}
-            </span>
-        </div>
-        <div class="boxtext">
-            <span style="display: block; margin: 0px auto; text-align: left;">
-                Latest Comments: {{event.tags[0]}} {{event.comments}}
-            </span>
+
         </div>
 
     </div>
+    <div class="textbox">
+                <h4>
+                    Starting at : {{event.startTime | date:"short"}}<br />
+                    Until :  {{event.endTime  | date:"short"}}
+                </h4>
+                <span style="display: block; margin: 0px auto; text-align: left;">
+                    PIN: {{event.pushpins}}
+                </span>
+                <span style="display: block; margin: 0px auto; text-align: left;">
+                    Latest Comments: {{event.tags[0]}} {{event.comments}}
+                </span>
+            </div>
     <br />
     <div class="row">
         <div class="col-lg-offset-2 col-md-3">

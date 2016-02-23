@@ -27,8 +27,11 @@
 
             $httpProvider.interceptors.push('authInterceptor');
 
-            $routeProvider.when('/', { template: 'Hello World!' });
-
+            $routeProvider.when('/', {
+                templateUrl: '/Presentation/ngApp/views/homeView.html',
+                controller: GroupProjectFestivalApp.Controllers.HostController,
+                controllerAs: 'controller'
+            });
             $routeProvider.when('/login', {
                 templateUrl: '/Presentation/ngApp/views/login.html',
                 controller: GroupProjectFestivalApp.Controllers.AuthController,

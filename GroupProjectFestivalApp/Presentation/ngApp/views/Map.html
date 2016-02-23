@@ -1,85 +1,82 @@
-﻿
-<div class="holder">
-    <div>
-        <h1>Man-E-Fest</h1>
-    </div>
-    <div class="map">
-        <a href="/all">
-            <img src="../../../Images/GennyFestMap.png" />
-        </a>
-        <ul class="all">
-            <p>
-                <br />
+﻿<h2>Man-E-Fest</h2>
+   <p>
 
+   </p>
+    <div class="holder">
+            <div class="map">
+                <a href="/all">
+                    <img src="../../../Images/GennyFestMap.png" />
+                </a>
+                <ul class="all">
+                    <p>
+                        <br />
+                    <li ng-click="controller.togglePin('food')">Food</li>
+                    <li ng-click="controller.togglePin('chair')">Wheel Chair Rental</li>
+                    <li ng-click="controller.togglePin('beer')">Beer</li>
+                    <li ng-click="controller.togglePin('aid')">FirstAid Kit</li>
+                    <li ng-click="controller.togglePin('water')">Water</li> </>
+                    <li ng-click="controller.togglePin('stage')">Stage</li>
+                    <li ng-click="controller.togglePin('atm')">ATM</li> </>
+                    <li ng-click="controller.togglePin('room')">Restroom</li>
+                    <li ng-click="controller.togglePin('booth')">Booth</li>
+                </ul>
+            </div>
+            <div class="map">
+                <b ng-show="controller.categories.food">
+                    <span class="pin" style="left: 650px; top: 220px; " element-number="1" alt="Food Selections From:"></span>
+                    <span class="pin" style="left: 490px; top: 403px;" element-number="2" alt="Food Selections From:">
+                    </span>
+                    <span class="pin" style="left: 660px; top: 410px;" element-number="3" alt="Food Selections From:">
+                    </span>
+                </b>
+                <b ng-show="controller.categories.chair">
 
-            <li ng-click="controller.togglePin('food')">Food</li>
-            <li ng-click="controller.togglePin('chair')">Wheel Chair Rental</li>
-            <li ng-click="controller.togglePin('beer')">Beer</li>
-            <li ng-click="controller.togglePin('aid')">FirstAid Kit</li>
-            <li ng-click="controller.togglePin('water')">Water</li> </>
-            <li ng-click="controller.togglePin('stage')">Stage</li>
-            <li ng-click="controller.togglePin('atm')">ATM</li> </>
-            <li ng-click="controller.togglePin('room')">Restroom</li>
-            <li ng-click="controller.togglePin('booth')">Booth</li>
-        </ul>
-    </div>
-    <div class="map">
-        <a ng-show="controller.categories.food">
-            <span class="pin" style="left: 650px; top: 220px; " element-number="1" alt="Food Selections From:"></span>
-            <span class="pin" style="left: 490px; top: 403px;" element-number="2" alt="Food Selections From:">
-            </span>
-            <span class="pin" style="left: 660px; top: 410px;" element-number="3" alt="Food Selections From:">
-            </span>
-        </a>
-        <a ng-show="controller.categories.chair">
+                    <span class="pin" style="left: 600px; top: 160px; " element-number="1" alt="Wheelchair Rental"></span>
+                    <span class="pin" style="left: 330px; top: 300px;" element-number="2" alt="Wheelchair Rental"></span>
+                    <span class="pin" style="left: 500px; top: 480px;" element-number="3" alt="Wheelchair Rental"></span>
 
-            <span class="pin" style="left: 600px; top: 160px; " element-number="1" alt="Wheelchair Rental"></span>
-            <span class="pin" style="left: 330px; top: 300px;" element-number="2" alt="Wheelchair Rental"></span>
-            <span class="pin" style="left: 500px; top: 480px;" element-number="3" alt="Wheelchair Rental"></span>
+                </b>
+                <a ng-show="controller.categories.beer">
+                    <span class="pin" style="left: 750px; top: 170px; " element-number="1" alt="Beer Station"></span>
+                    <span class="pin" style="left: 460px; top: 103px;" element-number="2" alt="Sponsor Booth:"></span>
+                    <span class="pin" style="left: 700px; top: 375px;" element-number="3" alt="Sponsor Booth:"></span>
 
-        </a>
-        <a ng-show="controller.categories.beer">
-            <span class="pin" style="left: 750px; top: 170px; " element-number="1" alt="Beer Station"></span>
-            <span class="pin" style="left: 460px; top: 103px;" element-number="2" alt="Sponsor Booth:"></span>
-            <span class="pin" style="left: 700px; top: 375px;" element-number="3" alt="Sponsor Booth:"></span>
+                </a>
+                <a ng-show="controller.categories.aid">
+                    <span class="pin" style="left: 760px; top: 300px; " element-number="1" alt="First Aid"></span>
+                    <span class="pin" style="left: 415px; top: 375px;" element-number="2" alt="First Aid"></span>
+                </a>
+                <a ng-show="controller.categories.water">
+                    <span class="pin" style="left: 440px; top: 20px; " element-number="1" alt="Water Station"></span>
+                    <span class="pin" style="left: 390px; top: 280px;" element-number="2" alt="Water Station:"></span>
+                    <span class="pin" style="left: 700px; top: 150px;" element-number="3" alt="Water Station:"></span>
+                    <span class="pin" style="left: 490px; top: 350px;" element-number="4" alt="Water Station:"></span>
+                    <span class="pin" style="left: 590px; top: 510px;" element-number="5" alt="Water Station:"></span>
 
-        </a>
-        <a ng-show="controller.categories.aid">
-            <span class="pin" style="left: 760px; top: 300px; " element-number="1" alt="First Aid"></span>
-            <span class="pin" style="left: 415px; top: 375px;" element-number="2" alt="First Aid"></span>
-        </a>
-        <a ng-show="controller.categories.water">
-            <span class="pin" style="left: 440px; top: 20px; " element-number="1" alt="Water Station"></span>
-            <span class="pin" style="left: 390px; top: 280px;" element-number="2" alt="Water Station:"></span>
-            <span class="pin" style="left: 700px; top: 150px;" element-number="3" alt="Water Station:"></span>
-            <span class="pin" style="left: 490px; top: 350px;" element-number="4" alt="Water Station:"></span>
-            <span class="pin" style="left: 590px; top: 510px;" element-number="5" alt="Water Station:"></span>
+                </a>
+                <a ng-show="controller.categories.stage">
+                    <span class="pin" style="left: 500px; top: 170px;" element-number="1" alt="See Performances from:"></span>
+                    <span class="pin" style="left: 650px; top: 103px;" element-number="2" alt="See Band Performances from:"></span>
+                    <span class="pin" style="left: 560px; top: 280px;" element-number="3" alt="See Band Performances from:"></span>
 
-        </a>
-        <a ng-show="controller.categories.stage">
-            <span class="pin" style="left: 500px; top: 170px;" element-number="1" alt="See Performances from:"></span>
-            <span class="pin" style="left: 650px; top: 103px;" element-number="2" alt="See Band Performances from:"></span>
-            <span class="pin" style="left: 560px; top: 280px;" element-number="3" alt="See Band Performances from:"></span>
+                </a>
+                <a ng-show="controller.categories.atm">
+                    <span class="pin" style="left: 400px; top: 170px; " element-number="1" alt="ATM"></span>
+                    <span class="pin" style="left: 615px; top: 460px;" element-number="2" alt="ATM"></span>
+                    <span class="pin" style="left: 370px; top: 410px;" element-number="3" alt="ATM"></span>
 
-        </a>
-        <a ng-show="controller.categories.atm">
-            <span class="pin" style="left: 400px; top: 170px; " element-number="1" alt="ATM"></span>
-            <span class="pin" style="left: 615px; top: 460px;" element-number="2" alt="ATM"></span>
-            <span class="pin" style="left: 370px; top: 410px;" element-number="3" alt="ATM"></span>
+                </a>
+                <a ng-show="controller.categories.room">
+                    <span class="pin" style="left: 500px; top: 80px; " element-number="1" alt="Public Restrooms"></span>
+                    <span class="pin" style="left: 715px; top: 215px;" element-number="2" alt="Public Restrooms"></span>
+                    <span class="pin" style="left: 415px; top: 410px;" element-number="3" alt="Public Restrooms"></span>
 
-        </a>
-        <a ng-show="controller.categories.room">
-            <span class="pin" style="left: 500px; top: 80px; " element-number="1" alt="Public Restrooms"></span>
-            <span class="pin" style="left: 715px; top: 215px;" element-number="2" alt="Public Restrooms"></span>
-            <span class="pin" style="left: 415px; top: 410px;" element-number="3" alt="Public Restrooms"></span>
+                </a>
+                <a ng-show="controller.categories.booth">
+                    <span class="pin" style="left: 630px; top: 315px;" element-number="1" alt="Sponsors Booth:"></span>
+                    <span class="pin" style="left: 415px; top: 103px;" element-number="2" alt="Sponsors Booth:"></span>
+                    <span class="pin" style="left: 325px; top: 350px;" element-number="3" alt="Sponsors Booth:"></span>
 
-        </a>
-        <a ng-show="controller.categories.booth">
-            <span class="pin" style="left: 630px; top: 315px;" element-number="1" alt="Sponsors Booth:"></span>
-            <span class="pin" style="left: 415px; top: 103px;" element-number="2" alt="Sponsors Booth:"></span>
-            <span class="pin" style="left: 325px; top: 350px;" element-number="3" alt="Sponsors Booth:"></span>
-
-        </a>
-    </div>
-</div>
-    
+                </a>
+            </div>
+        </div>
