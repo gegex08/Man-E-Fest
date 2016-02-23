@@ -39,13 +39,11 @@ namespace GroupProjectFestivalApp.Presentation.Controllers {
         }
 
         [HttpGet]
-        [Route("api/comments/{id}")]
-        public EventDTO GetComments(int id)
+        [Route("api/comments")]
+        public IList<CommentDTO> GetComments()
         {
-            var e = _eventService.GetEvent(id);
-            e.Comments = _commentService.GetComments(id);
-
-            return e;
+            return _commentService.GetComments();
+             
         }
     }
 }

@@ -18,10 +18,9 @@ namespace GroupProjectFestivalApp.Services {
             _attractionRepo = attractionRepo;
 
         }
-        public IList<CommentDTO> GetComments(int eventId) {
+        public IList<CommentDTO> GetComments() {
 
-            return (from c in _commentRepo.List()
-                    where c.Event.Id == eventId
+            return (from c in _commentRepo.List()                   
                     select new CommentDTO() {
                         Id = c.Id,
                         Message = c.Message,
