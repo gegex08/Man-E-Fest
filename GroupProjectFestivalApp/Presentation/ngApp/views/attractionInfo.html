@@ -7,9 +7,9 @@
         <div><h4> End Times: {{controller.info.events[0].endTime | date:"short"}}</h4></div>
     </div>
     <div><img src="{{controller.info.pictureUrl}}" /></div>
-    <div><h2>Attraction Bio:  {{controller.info.description}}</h2></div>
+    <div><h3>Attraction Bio:  </h3></div>
     <div>
-        <h2>
+        <h4>
             Average Fan Rating:
             <span class="rate1">
                 <input disabled type="radio" ng-model="controller.info.rating" value="5" />
@@ -23,20 +23,12 @@
                 <input disabled type="radio" ng-model="controller.info.rating" value="1" />
                 <label for="rating1"></label>
             </span>
-        </h2>
+        </h4>
+        <h4>{{controller.info.description}}</h4>
     </div>
 </div>
 
 
 
-<div style="display: block; margin: 0px auto; text-align: left;">
-    <div class="boxtext">        
-        <h4>
-            Find Us On:
-            <a href="www.facebook.com"> Facebook: <img src="http://ayunhalliday.com/wp-content/uploads/2015/09/Facebook-logo-png-2.png" height="60" width="75"></a>
-            <a href="www.twitter.com">Twitter: <img src="http://www.lexproducts.com/content/upload_general/twitter-logo-2.png" height="60" width="60" /></a>
-            <a href="www.instagram.com"> InstaGram: <img src="http://www.deonvsearth.com/wp-content/uploads/2015/02/instagram-logo-1024x1024.png" height="60" width="60"></a>
-        </h4>     
-    </div>
-</div>
+
 
