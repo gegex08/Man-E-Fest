@@ -67,7 +67,7 @@
                 controller: GroupProjectFestivalApp.Controllers.CommentController,
                 controllerAs: 'controller'
             });
-            $routeProvider.when('/map', {
+            $routeProvider.when('/map/:id', {
                 templateUrl: '/Presentation/ngApp/views/map.html',
                 controller: GroupProjectFestivalApp.Controllers.MapController,
                 controllerAs:'controller'

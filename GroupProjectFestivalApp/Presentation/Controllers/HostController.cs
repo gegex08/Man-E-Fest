@@ -20,8 +20,13 @@ namespace GroupProjectFestivalApp.Presentation.Controllers {
         [HttpGet]
         [Route("api/hosts")]
         public IList<HostDTO> Get() {
-            return _hostService.GetHost();
+            return _hostService.GetHosts();
+        }
 
+        [HttpGet]
+        [Route("api/pins/{id}")]
+        public MapDTO GetPins(int id) {
+            return _hostService.GetMap(id);
         }
     }
 }

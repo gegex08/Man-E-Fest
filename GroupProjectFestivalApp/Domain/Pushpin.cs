@@ -7,8 +7,7 @@ namespace GroupProjectFestivalApp.Domain {
     public class Pushpin {
 
         public int Id { get; set; }
-
-
+        
         public Host Host { get; set; }
 
         public string Name { get; set; }
@@ -17,6 +16,10 @@ namespace GroupProjectFestivalApp.Domain {
 
         public bool Active { get; set; } = true;
 
+        public int Left { get; set; }
+        
+        public int Top { get; set; }
 
+        public string Category { get; set; }
     }
 }

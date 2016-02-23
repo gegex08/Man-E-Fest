@@ -13,6 +13,11 @@ namespace GroupProjectFestivalApp.Services.Models {
         public string Name { get; set; }
 
         public IList<string> Events { get; set; }
+        
+        public string Category { get; set; }
 
+        public int Left { get; set; }
+
+        public int Top { get; set; }
     }
 }

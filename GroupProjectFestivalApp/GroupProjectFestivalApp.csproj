@@ -233,6 +233,10 @@
     <Compile Include="Migrations\201602120009228_changed model.Designer.cs">
       <DependentUpon>201602120009228_changed model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602232145391_pins.cs" />
+    <Compile Include="Migrations\201602232145391_pins.Designer.cs">
+      <DependentUpon>201602232145391_pins.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\AttractionController.cs" />
@@ -257,15 +261,27 @@
     <Compile Include="Services\Models\AttractionDTO.cs" />
     <Compile Include="Services\Models\EventDTO.cs" />
     <Compile Include="Services\Models\HostDTO.cs" />
+    <Compile Include="Services\Models\MapDTO.cs" />
     <Compile Include="Services\Models\PushpinDTO.cs" />
     <Compile Include="Services\Models\ApplicationUserDTO.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Audio\foo.mp3" />
-    <Content Include="CarouselPics\bruno.jpg" />
-    <Content Include="CarouselPics\Foo_Fighters.jpg" />
-    <Content Include="CarouselPics\kendrick-lamar-009.jpg" />
+    <Content Include="HomeCollagePics\bruno.jpg" />
+    <Content Include="HomeCollagePics\bw.jpg" />
+    <Content Include="HomeCollagePics\bw2.jpg" />
+    <Content Include="HomeCollagePics\bw3.jpg" />
+    <Content Include="HomeCollagePics\bw5.jpg" />
+    <Content Include="HomeCollagePics\bw6.jpg" />
+    <Content Include="HomeCollagePics\bw62.jpg" />
+    <Content Include="HomeCollagePics\bw7.png" />
+    <Content Include="HomeCollagePics\festival.jpg" />
+    <Content Include="HomeCollagePics\festival2.jpg" />
+    <Content Include="HomeCollagePics\festival9.jpg" />
+    <Content Include="HomeCollagePics\Foo_Fighters.jpg" />
+    <Content Include="HomeCollagePics\images.jpg" />
+    <Content Include="HomeCollagePics\kendrick-lamar-009.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -282,7 +298,14 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="HomeCollagePics\music-festival 10.jpg" />
+    <Content Include="HomeCollagePics\North Coast Music Festival__MG_1236_20100903.jpg" />
+    <Content Include="HomeCollagePics\Steven-Tyler-1975-9.jpg" />
+    <Content Include="HomeCollagePics\style-save-us-black-and-white1.jpg" />
+    <Content Include="HomeCollagePics\Summer-Festival-Blog.jpg" />
+    <Content Include="HomeCollagePics\tickets_florida-music-festival_13042457334329.png" />
     <Content Include="Images\festivalgirl.jpg" />
+    <Content Include="Images\Festmap.png" />
     <Content Include="Images\foldedmapimageforhomepagelink.jpg" />
     <Content Include="Images\GennyFestMap.png" />
     <Content Include="Images\GennyFestMap2.png" />
@@ -354,6 +377,7 @@
     <TypeScriptCompile Include="Presentation\ngApp\controllers\eventController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\hostController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\mapController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\filters\groupBy.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
@@ -380,6 +404,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602120009228_changed model.resx">
       <DependentUpon>201602120009228_changed model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602232145391_pins.resx">
+      <DependentUpon>201602232145391_pins.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

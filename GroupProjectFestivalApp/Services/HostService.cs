@@ -12,7 +12,8 @@ namespace GroupProjectFestivalApp.Services {
         public HostService(HostRepository hostRepo) {
             _hostRepo = hostRepo;
         }
-        public IList<HostDTO> GetHost() {
+
+        public IList<HostDTO> GetHosts() {
             return (from f in _hostRepo.List()
                     select new HostDTO() {
 
@@ -28,6 +29,18 @@ namespace GroupProjectFestivalApp.Services {
                     }).ToList();
         }
 
-
+        public MapDTO GetMap(int hostId) {
+            return (from h in _hostRepo.Get(hostId)
+                    select new MapDTO() {
+                        ImageUrl = "/Images/Festmap.png",
+                        Pins = (from p in h.Pushpins
+                                select new PushpinDTO() {
+                                    Name = p.Name,
+                                    Left = p.Left,
+                                    Top = p.Top,
+                                    Category = p.Category
+                                }).ToList()
+                    }).FirstOrDefault();
+        }
     }
 }
