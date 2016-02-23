@@ -28,7 +28,7 @@ namespace GroupProjectFestivalApp.Services.Models {
 
         public ApplicationUserDTO Users { get; set; }
 
-        public CommentDTO Comments { get; set; }
+        public IList<CommentDTO> Comments { get; set; }
 
     }
 }

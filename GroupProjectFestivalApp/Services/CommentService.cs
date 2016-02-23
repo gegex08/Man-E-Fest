@@ -18,32 +18,16 @@ namespace GroupProjectFestivalApp.Services {
             _attractionRepo = attractionRepo;
 
         }
-        public IList<CommentDTO> GetComment() {
+        public IList<CommentDTO> GetComments() {
 
-            return (from c in _commentRepo.List()
+            return (from c in _commentRepo.List()                   
                     select new CommentDTO() {
-
                         Id = c.Id,
                         Message = c.Message,
-                        Event = new EventDTO() {
-                            Id = c.Event.Id,
-                            Pushpin = new PushpinDTO() {
-                                Name = c.Event.Pushpin.Name,
-                            },
-                            Attraction = new AttractionDTO() {
-                                Name = c.Event.Attraction.Name,
-                            },
-                            Tags = (from t in c.Event.Tags
-                                    select t.Name).ToList(),
-                            Rating = (int)c.Event.Rating
-                        },
                         User = new ApplicationUserDTO() {
                             UserName = c.User.UserName
                         }
                     }).ToList();
         }
-        
-
-
     }
 }

@@ -236,7 +236,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\AttractionController.cs" />
-    <Compile Include="Presentation\Controllers\CommentController.cs" />
     <Compile Include="Presentation\Controllers\InfoController.cs" />
     <Compile Include="Presentation\Controllers\EventController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />
@@ -303,6 +302,7 @@
     <Content Include="Images\festivalgirl.jpg" />
     <Content Include="Images\foldedmapimageforhomepagelink.jpg" />
     <Content Include="Images\GennyFestMap.png" />
+    <Content Include="Images\GennyFestMap2.png" />
     <Content Include="Images\maplinkpictureforhomepage.png" />
     <Content Include="Presentation\ngApp\.gitignore" />
     <Content Include="Presentation\ngApp\views\attractionInfo.html" />
