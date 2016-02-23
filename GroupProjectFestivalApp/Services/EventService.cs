@@ -21,12 +21,12 @@ namespace GroupProjectFestivalApp.Services {
             _userRepo = userRepo;
             _commentRepo = commentRepo;
         }
-        public IList<EventDTO> GetEvent(int id) {
+        public EventDTO GetEvent(int id) {
 
             return (from e in _eventRepo.List()
                     where e.Id == id
                     select new EventDTO() {
-                      
+                        Id = e.Id,
                         StartTime = e.StartTime,
                         EndTime = e.EndTime,
                         AttendanceCount = e.Users.Count(),
@@ -43,8 +43,8 @@ namespace GroupProjectFestivalApp.Services {
                         Tags = (from t in e.Tags
                                 select t.Name).ToList(),
                         Host = e.Host.Name,
-                        Rating = (int)e.Rating,
-                    }).ToList();
+                        Rating = (int)e.Rating
+                    }).FirstOrDefault();
         }
         public EventDTO AddComment(int eventId, string userName, CommentBindingModel newComment) {
             var eve = _eventRepo.Get(eventId)

@@ -10,20 +10,23 @@ using System.Web.Http;
 
 namespace GroupProjectFestivalApp.Presentation.Controllers {
     public class EventController : ApiController {
-        private EventService _eventService;
 
-        public EventController(EventService eventService) {
+        private EventService _eventService;
+        private CommentService _commentService;
+
+        public EventController(EventService eventService, CommentService commentService) {
             _eventService = eventService;
+            _commentService = commentService;
         }
 
 
         [HttpGet]
         [Route("api/events/{id}")]
-        public IList<EventDTO> Get(int id) {
+        public EventDTO Get(int id) {
             return _eventService.GetEvent(id);
         }
 
-       
+
 
         [HttpPost]
         [Authorize]
@@ -35,6 +38,14 @@ namespace GroupProjectFestivalApp.Presentation.Controllers {
             return BadRequest();
         }
 
+        [HttpGet]
+        [Route("api/comments/{id}")]
+        public EventDTO GetComments(int id)
+        {
+            var e = _eventService.GetEvent(id);
+            e.Comments = _commentService.GetComments(id);
 
+            return e;
+        }
     }
 }
