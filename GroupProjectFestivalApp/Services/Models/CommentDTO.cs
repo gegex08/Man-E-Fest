@@ -12,8 +12,12 @@ namespace GroupProjectFestivalApp.Services {
 
         public string Message { get; set; }
 
+        public string AttractionName { get; set; }
+
         public EventDTO Event { get; set; }
 
         public ApplicationUserDTO User { get; set; }     
+
+        public int Rating { get; set; }
     }
 }
