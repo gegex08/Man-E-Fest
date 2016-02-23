@@ -264,9 +264,20 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Audio\foo.mp3" />
-    <Content Include="CarouselPics\bruno.jpg" />
-    <Content Include="CarouselPics\Foo_Fighters.jpg" />
-    <Content Include="CarouselPics\kendrick-lamar-009.jpg" />
+    <Content Include="HomeCollagePics\bruno.jpg" />
+    <Content Include="HomeCollagePics\bw.jpg" />
+    <Content Include="HomeCollagePics\bw2.jpg" />
+    <Content Include="HomeCollagePics\bw3.jpg" />
+    <Content Include="HomeCollagePics\bw5.jpg" />
+    <Content Include="HomeCollagePics\bw6.jpg" />
+    <Content Include="HomeCollagePics\bw62.jpg" />
+    <Content Include="HomeCollagePics\bw7.png" />
+    <Content Include="HomeCollagePics\festival.jpg" />
+    <Content Include="HomeCollagePics\festival2.jpg" />
+    <Content Include="HomeCollagePics\festival9.jpg" />
+    <Content Include="HomeCollagePics\Foo_Fighters.jpg" />
+    <Content Include="HomeCollagePics\images.jpg" />
+    <Content Include="HomeCollagePics\kendrick-lamar-009.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -283,6 +294,12 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="HomeCollagePics\music-festival 10.jpg" />
+    <Content Include="HomeCollagePics\North Coast Music Festival__MG_1236_20100903.jpg" />
+    <Content Include="HomeCollagePics\Steven-Tyler-1975-9.jpg" />
+    <Content Include="HomeCollagePics\style-save-us-black-and-white1.jpg" />
+    <Content Include="HomeCollagePics\Summer-Festival-Blog.jpg" />
+    <Content Include="HomeCollagePics\tickets_florida-music-festival_13042457334329.png" />
     <Content Include="Images\festivalgirl.jpg" />
     <Content Include="Images\foldedmapimageforhomepagelink.jpg" />
     <Content Include="Images\GennyFestMap.png" />

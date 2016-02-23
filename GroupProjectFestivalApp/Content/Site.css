@@ -230,3 +230,20 @@ textarea {
     z-index: 10;
     background-color: #7142a7;
 }
+
+#photos {
+line-height: 0;
+
+-webkit-column-count: 5;
+-webkit-column-gap: 0px;
+-moz-column-count: 5;
+-moz-column-gap: 0px;
+column-count: 5;
+column-gap: 0px;
+}
+
+    #photos img {
+    width: 100% !important;
+    height: auto !important;
+    
+    }
