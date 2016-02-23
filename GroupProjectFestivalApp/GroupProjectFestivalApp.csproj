@@ -236,7 +236,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\AttractionController.cs" />
-    <Compile Include="Presentation\Controllers\CommentController.cs" />
     <Compile Include="Presentation\Controllers\InfoController.cs" />
     <Compile Include="Presentation\Controllers\EventController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />

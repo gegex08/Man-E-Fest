@@ -1,7 +1,7 @@
 ﻿
 
 <h3 class="text-center">Attraction Listing</h3>
-
+ <div class="row">
 <div>
     <nav>
         <div class="col-md-4 text-center">
@@ -19,11 +19,12 @@
                 <h4 ng-click="order = 'rating'">Attraction Ratings</h4>
             </div>
         </div>
-
     </nav>
 </div>
+<br />
 
-<div class="row" ng-repeat="attraction in controller.attractions | orderBy:order">
+
+    <div class="row" ng-repeat="attraction in controller.attractions | orderBy:order">
 
     <div class="boxtext2">
         <div class="row">
@@ -38,6 +39,8 @@
                 </h4>
             </div>
             <div class="col-md-3">
+            <a href="#/info/{{attraction.id}}">  <img ng-src="{{attraction.pictureUrl}}" height="175" width="175"></a>
+                           
                 <h4>
                         
                         {{attraction.events[0].startTime | date:"short"}}
@@ -65,7 +68,5 @@
         </div>
 
 
-    </div>
-
-
+        </div> 
 </div>
