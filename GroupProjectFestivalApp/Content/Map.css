@@ -1,16 +1,18 @@
 ﻿.map {
     position: absolute;
-    top: 25%;
-    left: 20%;
-    border: outset 7px #41adb4;
-    -moz-border-radius: 30px;
-    -webkit-border-radius: 30px;
-    border-radius: 30px;
+    top: 5%;
+    left: 15%;
+    
 }
-
+.map img{
+    margin-top:405px;
+    border:solid black 5px;
+    border-radius: 5px;
+}
 body {
     background-color: white;
 }
+
 
 
 .holder li:hover {
@@ -89,6 +91,6 @@ body {
 .all {
     position: absolute;
     width: 290px;
-    top: 20px;
+    top: 425px;
     left: 80px;
 }

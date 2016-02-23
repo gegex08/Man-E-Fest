@@ -286,6 +286,7 @@
     <Content Include="Images\festivalgirl.jpg" />
     <Content Include="Images\foldedmapimageforhomepagelink.jpg" />
     <Content Include="Images\GennyFestMap.png" />
+    <Content Include="Images\GennyFestMap2.png" />
     <Content Include="Images\maplinkpictureforhomepage.png" />
     <Content Include="Presentation\ngApp\.gitignore" />
     <Content Include="Presentation\ngApp\views\attractionInfo.html" />
