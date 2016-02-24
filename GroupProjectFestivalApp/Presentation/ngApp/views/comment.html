@@ -1,7 +1,7 @@
 ﻿<div style="background-color: aliceblue">
     <div class="row" ng-repeat="comment in controller.comments">
         <h3>
-            {{comment.message}}
+            User Comments
         </h3>
         <div class="row">
             <img src="http://www.adsitsolutions.com/images/icons/grey/home-user-icon.png" 
@@ -9,7 +9,7 @@
                  width="75" />
             <br />
             <strong>
-                User: {{comment.user.userName}}
+                User {{comment.user.userName}} says:
             </strong>
             <br />
         </div>
@@ -17,21 +17,29 @@
             <div>
                 <h4>
                     <strong>
-                        Attraction:
+                        Event Name:
                     </strong>
-                     {{comment.event.attraction.name}}
+                     {{comment.attractionName}}
+
+                    <span class="rate1">
+                        <inpup disabled type="radio" ng-model="comment.rating" value="5" />
+                        <label for="rating5"></label>
+                        <input disabled type="radio" ng-model="comment.rating" value="4" />
+                        <label for="rating4"></label>
+                        <input disabled type="radio" ng-model="comment.rating" value="3" />
+                        <label for="rating3"></label>
+                        <input disabled type="radio" ng-model="comment.rating" value="2" />
+                        <label for="rating2"></label>
+                        <input disabled type="radio" ng-model="comment.rating" value="1" />
+                        <label for="rating1"></label>
+                    </span>
                 </h4>
-                <p>
-                </p>
             </div>
             <div>
                 {{comment.message}}
                 <br />
             </div>
         </div>
-        <br />
-        <div class="text-right">
-            Pin: {{comment.event.pushpin.name}}
-        </div>
+
     </div>
 </div>

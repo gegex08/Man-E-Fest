@@ -17,7 +17,7 @@
                 this.categories[key] = false;
         
             }
-            this.categories[category] = true;
+            this.categories[category] = true;            
         }
     }
 }

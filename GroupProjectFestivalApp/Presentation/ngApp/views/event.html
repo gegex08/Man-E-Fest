@@ -23,7 +23,7 @@
             </form>
             
 
-gi
+
         </div>
 
     </div>
@@ -44,8 +44,7 @@ gi
         <div class="col-lg-offset-2 col-md-3">
             <img ng-src="{{controller.event.attraction.pictureUrl}}" height="500" width="800" />
             <div class="col-md-offset-12 col-md-12">
-                <audio controls autoplay>
-                    <source ng-src="{{controller.event.attraction.soundUrl}}" type="audio/mp3">
+                <audio controls autoplay ng-src="{{controller.event.attraction.soundUrl}}" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
                 <br />

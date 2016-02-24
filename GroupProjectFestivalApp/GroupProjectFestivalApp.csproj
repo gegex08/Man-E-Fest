@@ -310,6 +310,7 @@
     <Content Include="Images\GennyFestMap.png" />
     <Content Include="Images\GennyFestMap2.png" />
     <Content Include="Images\maplinkpictureforhomepage.png" />
+    <Content Include="Images\maroon5_wide-72ecc9e2ef11e6f4e8fa26275a57a9b66bcdbfa2.jpg" />
     <Content Include="Presentation\ngApp\.gitignore" />
     <Content Include="Presentation\ngApp\views\attractionInfo.html" />
     <Content Include="Presentation\ngApp\views\attractionList.html" />

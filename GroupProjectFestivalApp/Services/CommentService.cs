@@ -24,6 +24,8 @@ namespace GroupProjectFestivalApp.Services {
                     select new CommentDTO() {
                         Id = c.Id,
                         Message = c.Message,
+                        AttractionName = c.Event.Attraction.Name,
+                        Rating = (int)c.Event.Rating,
                         User = new ApplicationUserDTO() {
                             UserName = c.User.UserName
                         }

@@ -128,8 +128,16 @@ h4 {
     align-content: center;
 }
 h6{
+    font-size:14px;
     color:white;
     font-family:Rockwell;
+    margin-left:100px;
+    margin-top:20px;
+
+}
+h6:hover{
+    background-color:#3bc57f;
+    color:black;
 }
 .img1 span {
     font-size: 800%;
@@ -175,6 +183,7 @@ textarea {
     .boxtext1 h4:hover {
         color: #ffffff;
         background-color: #CCCCCC;
+        cursor:pointer;
     }
 
 boxtext2 h4 {
